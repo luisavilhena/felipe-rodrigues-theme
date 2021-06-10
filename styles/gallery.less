@@ -1,0 +1,32 @@
+.gallery {
+	display: flex;
+	flex-direction: column;
+	.gallery__destak {
+		margin-bottom: 2px;
+	}
+	.gallery__items {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		img {
+			cursor: pointer;
+			width: 178px;
+			margin-right: 2px;
+			margin-bottom: 2px;
+		}
+	}
+}
+
+@media screen and (max-width: @screen-sm) {
+	.gallery{
+		.gallery__destak {
+			// margin-top: 65px;
+		}
+		.gallery__items {
+			img {
+				width: 94px;
+			}
+		}
+	}
+}

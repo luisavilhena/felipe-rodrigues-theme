@@ -1,0 +1,99 @@
+@import './structure.less';
+
+
+h1, h2, h3 {
+	font-family: 'Futura', sans-serif;
+}
+p, a {
+	font-family: 'Arial', sans-serif;
+}
+
+h1 {
+	font-size: 90px;
+	line-height: 76px;
+	min-height: 18vh;
+	width: 100%;
+	// overflow: hidden;
+	color: #FFF;
+	text-transform: uppercase;
+	animation: type 1.3s steps(25, end);
+}
+//animação dos h1
+@keyframes type {
+  0% {
+    width: 0%;
+  }
+}
+h2 {
+	font-size: 50px;
+	line-height: 51px;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 22px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 15px;
+}
+p:last-of-type {
+	margin-bottom: 50px;
+}
+a {
+	color: black;
+	&:hover {
+	}
+}
+strong {
+	font-size: 50px;
+	line-height: 51px;
+}
+
+blockquote, q, {
+	margin: 0 8%;
+	font-style: italic;
+	p:last-of-type {
+		margin-bottom: 15px; 
+	}
+}
+
+@media screen and (max-width: @screen-sm) {
+	h1 {
+		font-size: 30px;
+		line-height: 25px;
+		min-height: auto;
+	}
+	h2 {
+		font-size: 20px;
+		line-height: 21px;
+	}
+	h3 {
+		font-size: 16px;
+		margin-bottom: 3px;
+		line-height: 19px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 19px;
+	}
+	strong {
+	font-size: 20px;
+	line-height: 21px;
+}
+	figure, .wp-block-image {
+		margin-bottom: 30px;
+		margin-top: 30px;
+		figcaption {
+			font-size: 16px;
+			a {
+				font-size: 16px;
+			}
+		}
+	}
+}

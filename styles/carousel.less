@@ -1,0 +1,42 @@
+@import './structure.less';
+
+.carousel {
+	margin: 0 auto 60px auto;
+
+	.slick-list {	
+		.item {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			height: 340px;
+		}
+	}
+	.slick-next {
+	}
+}
+
+@media screen and (max-width: @screen-md)  {
+	.carousel {
+		.slick-list {
+			.item {
+			}
+		}
+		.slick-next {
+			&:before {
+			}
+		}
+	}
+}
+@media screen and (max-width: @screen-sm)  {
+	.carousel {
+		.slick-list {
+			.item {
+				height: 220px;
+			}
+		}
+		.slick-next {
+			&:before {
+			}
+		}
+	}
+}

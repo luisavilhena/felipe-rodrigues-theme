@@ -1,0 +1,37 @@
+@import './structure.less';
+
+
+header {
+	// padding: 30px 10% 40px 10%;
+	background-color: white;
+	font-family: 'arial', sans-serif;
+	position: fixed;
+	right: 0;
+	width: 100%;
+	z-index: 2;
+
+
+	@media screen and (max-width: @screen-sm)  {
+		padding: 0px;
+		width: 100%;
+		position: fixed;
+		height: 65px;
+		background-color: white;
+		top: 0;
+	}
+}
+#logo-anchor {
+	position: fixed;
+	right: 2.7%;
+	top: 16px;
+	z-index: 10;
+	img {
+		width: 70px;
+	}
+	@media screen and (max-width: @screen-sm)  {
+		top: 9px;
+		img {
+			width: 45px;
+		}
+	}
+}
