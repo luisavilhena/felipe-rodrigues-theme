@@ -36,23 +36,23 @@
     id="main-header"
     class="active"
     data-component="collapsible-header">
+    <a
+      id="logo-anchor"
+      href="<?php echo get_home_url(); ?>">
+      <strong>FELIPE RODRIGUES</strong> ARQUITETURA
+    </a>
+
 
     <button
       id="mobile-menu-trigger"
       data-component="trigger"
       data-trigger-target="body">
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="mobile-menu-trigger__horizontal">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="mobile-menu-trigger__vertical">
         <span></span>
         <span></span>
         <span></span>
@@ -70,11 +70,6 @@
         ));
       ?>
 
-      <a
-        class="cc-menu-search link link--icon-lg"
-        href="<?php echo get_home_url(); ?>?s=">
-  
-      </a>
     </nav>
 	  
 	</header>

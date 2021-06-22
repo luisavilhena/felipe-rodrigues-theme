@@ -62,21 +62,23 @@ function add_viewport_meta_tag() {
     echo '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">';
 }
 
-//post
+///////////
+////post///
+///////////
 function support_thumbnails() {
     add_theme_support('post-thumbnails'); // thumbnails
 }
 
 add_action('after_setup_theme', 'support_thumbnails'); // carrega parametros de suporte do tema
 
-//////////
+///////////
 //excerpt//
 ///////////
 add_post_type_support( 'page', 'excerpt' );
 
 
-////////
-//vcard///
+///////////
+//vcard////
 ///////////
 function _thz_enable_vcard_upload( $mime_types ){
     $mime_types['vcf'] = 'text/vcard';
@@ -85,6 +87,81 @@ function _thz_enable_vcard_upload( $mime_types ){
 }
 add_filter('upload_mimes', '_thz_enable_vcard_upload' );
 
+////////////////
+////taxonomia///
+////////////////
+
+/* -- Post Type - Projetos -- */
+function custom_post_type_projetos() {
+    $labels = [
+        "name" => __( "Projetos"),
+        "singular_name" => __( "Projetos"),
+    ];
+
+    $args = [
+        "label" => __( "Projetos"),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "delete_with_user" => false,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => [ "slug" => "projetos", "with_front" => true ],
+        "query_var" => true,
+        "menu_position" => 5,
+        "menu_icon" => "dashicons-book-alt",
+        "supports" => [ "title", "editor", "thumbnail", "excerpt", "trackbacks", "custom-fields", "comments", "revisions", "author", "page-attributes", "post-formats" ],
+        "taxonomies" => [ "genero" ],
+    ];
+
+    register_post_type( "projetos", $args );
+}
+
+add_action( 'init', 'custom_post_type_projetos' );
+
+/* ------------------------------ Taxonomias - Genero -----------------------------*/
+function custom_taxonomy_projeto() {
+
+    /**
+     * Taxonomy: Projeto.
+     */
+
+    $labels = [
+        "name" => __( "Projeto"),
+        "singular_name" => __( "Projeto"),
+    ];
+
+    $args = [
+        "label" => __( "Projeto"),
+        "labels" => $labels,
+        "public" => true,
+        "publicly_queryable" => true,
+        "hierarchical" => true,
+        "show_ui" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "query_var" => true,
+        "rewrite" => [ 'slug' => 'projetos', 'with_front' => true, ],
+        "show_admin_column" => true,
+        "show_in_rest" => true,
+        "rest_base" => "projeto",
+        "rest_controller_class" => "WP_REST_Terms_Controller",
+        "show_in_quick_edit" => true,
+        ];
+    register_taxonomy( "projeto", [ "projetos" ], $args );
+}
+add_action( 'init', 'custom_taxonomy_projeto' );
 
 
 

@@ -1,8 +1,37 @@
 @import './structure.less';
-
+.btn {
+	position: absolute;
+	right: 30px;
+	padding-top: 400px;
+	z-index: 1000;
+}
+.projeto__img-pb{
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	filter: grayscale(100%);
+}
 .carousel {
 	margin: 0 auto 60px auto;
 
+	.slick-list {	
+		.item {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			height: 100vh;
+		}
+	}
+	.slick-next {
+	}
+}
+.sliders.slick-slider {
+	// display: none;
+	position: absolute !important;
+	left: -190%;
+	top: 10%;
 	.slick-list {	
 		.item {
 			background-repeat: no-repeat;
@@ -11,32 +40,7 @@
 			height: 340px;
 		}
 	}
-	.slick-next {
-	}
 }
 
-@media screen and (max-width: @screen-md)  {
-	.carousel {
-		.slick-list {
-			.item {
-			}
-		}
-		.slick-next {
-			&:before {
-			}
-		}
-	}
-}
-@media screen and (max-width: @screen-sm)  {
-	.carousel {
-		.slick-list {
-			.item {
-				height: 220px;
-			}
-		}
-		.slick-next {
-			&:before {
-			}
-		}
-	}
-}
+
+

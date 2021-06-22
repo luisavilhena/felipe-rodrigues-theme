@@ -14,6 +14,8 @@ add_action( 'after_setup_theme', 'tc' );
 function tc_carousel() {
 	Block::make( 'Carrossel' )
 		->add_fields( array(
+			Field::make('image', 'img_blackwhite', 'Imagem P&B'),
+			Field::make('rich_text', 'texto', 'Imagem P&B'),
 			Field::make('complex', 'carousel', 'Carrossel')
 			  ->add_fields(array(
 			    Field::make('image', 'img', 'Imagem')
@@ -24,8 +26,25 @@ function tc_carousel() {
  
 			// ob_start();
 			?>
+			<div class="btn">
+				+ INFORMAÇÕES
+				<div>
+					<?php echo $block['texto'] ?>					
+				</div>
+			</div>
+			<div class="projeto__img-pb" style ="background-image: url('<?php echo wp_get_attachment_image_src($block['img_blackwhite'],'ap_image_desktop_full_no_crop')[0]; ?>');">
+			</div>
  
 			<div class="carousel">
+				<?php foreach ($block['carousel'] as $carousel) : ?>
+					<?php if ($carousel['img']) : ?>
+				<div class="item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
+			
+				</div>
+					<?php endif; ?>
+				<?php endforeach;  ?>
+			</div>
+			<div class="sliders">
 				<?php foreach ($block['carousel'] as $carousel) : ?>
 					<?php if ($carousel['img']) : ?>
 				<div class="item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">

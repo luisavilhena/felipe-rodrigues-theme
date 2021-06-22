@@ -5,9 +5,6 @@ get_header(); ?>
 
 <main class="home-template">
 	<div class="home-template__img">
-		<img class=""
-	      src="<?php echo get_template_directory_uri() ?>/resources/img/logo.png"
-	  />
 	</div>
 </main>
 
