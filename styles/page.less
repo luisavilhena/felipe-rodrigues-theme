@@ -1,0 +1,41 @@
+.page-template-default {
+	background-color: @grey;
+	overflow: hidden;
+	ul#main-menu {
+		> li:hover {
+			> ul {
+				left: -12%;
+				right: -8%;
+				background-color: @grey;
+				li {
+					padding-left: 10%;
+				}
+			}
+		}
+	} 
+
+	.template-adorno {
+		.template-adorno-1 {
+			z-index: 10000000000;
+			position: absolute;
+			left: 73.1%;
+			top: 0;
+			background-color: white;
+			width: 1px;
+			height: @heightadorno;
+		}
+	}
+	.template-content {
+		margin-left: 25%;
+		padding-top: 94px;
+		width: 40%;
+
+		> h1, 
+		> h2, 
+		> h3,
+		> h4,
+		> p {
+			margin-left: 12%;
+		}
+	}
+}

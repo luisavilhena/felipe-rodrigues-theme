@@ -2,23 +2,46 @@
 
 
 header {
-	padding: 50px 5%;
+	padding: 70px 1%;
 	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
 	display: flex;
 	align-items: center;
-	z-index: 1000000;
+	z-index: 1000000000;
+	font-family: Futura;
 
 	@media screen and (max-width: @screen-sm)  {
+	}
+
+	.header-menu-container {
+		position: absolute;
+		left: 30%;
+		top: 60px;
 	}
 }
 #logo-anchor {
 	color: #ffffff;
+	text-decoration: none;
+	font-family: 'Futura';
+	font-size: 18px;
+	font-weight: 500;
+	strong {
+		// font-family: 'Futura';
+
+		font-weight: 600;
+	}
+
 }
 #mobile-menu-trigger {
 	display: none;
+}
+
+@media screen and (max-width: 1315px) {
+	#logo-anchor {
+		max-width: 190px;
+	}
 }
 
 @media screen and (max-width: @screen-sm) {

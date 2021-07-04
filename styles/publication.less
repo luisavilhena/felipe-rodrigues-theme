@@ -1,0 +1,46 @@
+@import './structure.less';
+
+.post-template-default {
+	overflow: hidden;
+	height: 100vh;
+	#publication {
+
+		.slick-arrow {
+			display: none !important;
+		}
+		.publication__carousel__img {
+			height: 100vh;
+			// display: none;
+			margin: 0 auto 60px auto;
+
+			.publication__carousel__img-item {
+				z-index: 1 !important;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 100vh !important;
+			}
+		}
+
+		.publication__carousel__sliders {
+			z-index: 10000000 !important;
+			position: absolute !important;
+			left: 2%;
+			top: 140px;
+			width: 20%;
+		
+			.publication__carousel__sliders-item {
+				background-repeat: no-repeat;
+				background-size: contain;
+				min-height: 180px !important;
+				height: auto;
+				width: 100% !important;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+
+
+

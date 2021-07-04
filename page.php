@@ -6,9 +6,12 @@ get_header(); ?>
 
 
 <main id="template"class="">
-	<div class="">
+	<div class="template-adorno">
+		<div class="template-adorno-1"></div>
 	</div>
-	<?php the_content(); ?>
+	<div class="template-content">
+		<?php the_content(); ?>
+	</div>
 
 </main>
 <?php endwhile; ?>

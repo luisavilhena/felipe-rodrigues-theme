@@ -1,16 +1,10 @@
 <?php
 
 get_header(); ?>
+<?php while (have_posts("projetos")) : the_post("projeto"); ?>
 
-<?php while (have_posts("Projetos")) : the_post("Projetos"); ?>
-
-
-<main id="projetos"class="">
-	<div class="">
-		 <?php the_content(); ?>
-
-	</div>
-
+<main class="projeto">
+  <?php the_content(); ?>
 </main>
 <?php endwhile; ?>
 

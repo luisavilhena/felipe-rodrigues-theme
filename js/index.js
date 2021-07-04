@@ -11,287 +11,93 @@ function menuButtonOpen() {
 }
 
 $(document).ready(function(){
-	$('.carousel').slick({
+	$('.project__carousel__img').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
 		fade: true,
-		asNavFor: '.sliders'
+		asNavFor: '.project__carousel__sliders'
 	});
-	$('.sliders').slick({
+	$('.project__carousel__sliders').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
-	 	asNavFor: '.carousel',
+	 	asNavFor: '.project__carousel__img',
 	 	centerMode: true,
 	 	focusOnSelect: true,
 	  vertical: true,
 	  verticalSwiping: true,
 	});
-	$('.sliders').on("click", function(event) {
-		$('.projeto__img-pb').css('display', 'none')
+
+	$('.project__carousel__sliders').on("click", function(event) {
+		// $('.project__carousel__img').css('display', 'block')
+		setTimeout(function(){
+			$('.project__img-pb').css('display', 'none')
+		}, 100)
 	})
-	$('.btn').on("click", function(event) {
-		$('.sliders.slick-slider').css('left', '-90%')
+
+	$('.project__btns-btn').on("click", function(event) {
+		$('.project__carousel__sliders.slick-slider').animate({
+		  left: "1%"
+		}, 600, "linear");
+		$('.project__btns-btn-description').css('color', 'white')
+		$('.project__btns-btn-description').css('transition', 'color 0.5s')
+		$('.project__btns-btn__symbol span:nth-of-type(2n)').css('transform', 'rotate(90deg)')
+		$('.project__btns-btn__symbol span:nth-of-type(2n)').css('transition', 'transform 0.5s')
 	})
-});
+
+	////////////carrossel publicação
 
 
-
-//menu
-$(document).ready(function(){
-		var colorSelect = $('#menu-item-7 > a').css("color")
-		$('#menu-item-7 > a').css("color", "black");
-
-	 //  $('#menu-item-7').hover(function() {
-		//   	$('#menu-item-7 > a').css("color", colorSelect)
-		//   }, function() { 
-		//   	$('#menu-item-7 > a').css("color", "black")}
-		// );
-		if ($('#menu-item-7 > ul > li').hasClass("current_page_item")) {
-			var colorClick = $('.current_page_item > a').css("color")
-			$('#menu-item-7 > a').css("color", colorClick)
-			$('#menu-item-7').hover(function() {
-			  	// $('#menu-item-7 > a').css("color", colorSelect)
-			  }, function() { 
-			  	$('#menu-item-7 > a').css("color", colorClick)
-			  }
-			);
-
-			$('.template-tc__title > h1').css("color", colorClick);
-			$('strong').css("color", colorClick);
-			$('h2').css("color", colorClick);
-			$('h1').css("color", colorClick);
-			$('.template-tc  a').css("color", colorClick);
-
-		}else {
-			$('#menu-item-7 > a').css("color", "black");
-		}
-});
-
-$(document).ready(function(){
-		var colorSelect = $('#menu-item-125 > a').css("color")
-		$('#menu-item-125 > a').css("color", "black");
-
-		if ($('#menu-item-125').hasClass("current_page_item")) {
-			// var colorClick = $('.current_page_item > a').css("color")
-			$('#menu-item-125 > a').css("color", colorSelect)
-			$('#menu-item-125').hover(function() {
-			  	// $('#menu-item-125 > a').css("color", colorSelect)
-			  }, function() { 
-			  	$('#menu-item-125 > a').css("color", colorSelect)
-			  }
-			);
-
-			$('.template-tc__title > h1').css("color", colorSelect);
-			$('strong').css("color", colorSelect);
-			$('h2').css("color", colorSelect);
-			$('h1').css("color", colorSelect);
-			$('.template-tc  a').css("color", colorClick);
-
-		} else {
-			$('#menu-item-125 > a').css("color", "black");
-		}
+		$('.publication__carousel__img').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.publication__carousel__sliders'
+		});
+		$('.publication__carousel__sliders').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+		 	asNavFor: '.publication__carousel__img',
+		 	centerMode: true,
+		 	focusOnSelect: true,
+		  vertical: true,
+		  verticalSwiping: true,
+		});
 
 });
 
 
-$(document).ready(function(){
-	var colorSelect = $('#menu-item-9 > a').css("color")
-	$('#menu-item-9 > a').css("color", "black");
+//////////adorno
+const onResize = () => {
+  const adorno2 = document.querySelector('.adorno-2');
+  const adorno3 = document.querySelector('.adorno-3');
 
- //  $('#menu-item-9').hover(function() {
-	//   	$('#menu-item-9 > a').css("color", colorSelect)
-	//   }, function() { 
-	//   	$('#menu-item-9 > a').css("color", "black")}
-	// );
-	if ($('#menu-item-9 > ul > li').hasClass("current_page_item")) {
-		var colorClick = $('.current_page_item > a').css("color")
-		$('#menu-item-9 > a').css("color", colorClick)
-		$('#menu-item-9').hover(function() {
-		  	// $('#menu-item-9 > a').css("color", colorSelect)
-		  }, function() { 
-		  	$('#menu-item-9 > a').css("color", colorClick)
-		  }
-		);
+  
+  // Pega a posição do canto inferior esquerdo da tela
+  const posicaoInferior = {
+    x: 0,
+    y: window.innerHeight
+  }
 
-		$('.template-tc__title > h1').css("color", colorClick);
-		$('strong').css("color", colorClick);
-		$('h2').css("color", colorClick);
-		$('h1').css("color", colorClick);
-		$('.template-tc  a').css("color", colorClick);
+  // Pega a posição do do .adorno-2, pois o angulo sera entre a posicao do .adorno-2 e o canto inferior esquerdo da tela
+  const posicaoAdorno = {
+    x: adorno2.offsetLeft,
+    y: adorno2.offsetTop
+  }
 
-	} else {
-		$('#menu-item-9 > a').css("color", "black");
-	}
+  // Formula para pegar o angulo entre 2 pontos
+  let angle = Math.atan2(posicaoAdorno.y - posicaoInferior.y, posicaoAdorno.x - posicaoInferior.x);
+  // Por padrao o angulo usa como unidade de medida o Radiano (que vai de 0 a Math.PI), aqui convertemos ele para graus
+  angle = angle * (180 / Math.PI)
 
-});
-$(document).ready(function(){
-	var colorSelect = $('#menu-item-10 > a').css("color")
-	$('#menu-item-10 > a').css("color", "black");
+  adorno3.style.transform = `rotate(${angle + 90}deg)`;
+}
 
- //  $('#menu-item-10').hover(function() {
-	//   	$('#menu-item-10 > a').css("color", colorSelect)
-	//   }, function() { 
-	//   	$('#menu-item-10 > a').css("color", "black")}
-	// );
-	if ($('#menu-item-10 > ul > li').hasClass("current_page_item")) {
-		var colorClick = $('.current_page_item > a').css("color")
-		$('#menu-item-10 > a').css("color", colorClick)
-		$('#menu-item-8').hover(function() {
-		  	// $('#menu-item-10 > a').css("color", colorSelect)
-		  }, function() { 
-		  	$('#menu-item-10 > a').css("color", colorClick)
-		  }
-		);
-
-		$('.template-tc__title > h1').css("color", colorClick);
-		$('strong').css("color", colorClick);
-		$('h2').css("color", colorClick);
-		$('h1').css("color", colorClick);
-		$('.template-tc  a').css("color", colorClick);
-
-	} else {
-		$('#menu-item-10 > a').css("color", "black");
-	}
-});
-$(document).ready(function(){
-	var colorSelect = $('#menu-item-11 > a').css("color")
-	$('#menu-item-11 > a').css("color", "black");
-
- //  $('#menu-item-11').hover(function() {
-	//   	$('#menu-item-11 > a').css("color", colorSelect)
-	//   }, function() { 
-	//   	$('#menu-item-11 > a').css("color", "black")}
-	// );
-	if ($('#menu-item-11 > ul > li').hasClass("current_page_item")) {
-		var colorClick = $('.current_page_item > a').css("color")
-		$('#menu-item-11 > a').css("color", colorClick)
-		$('#menu-item-11').hover(function() {
-		  	// $('#menu-item-11 > a').css("color", colorSelect)
-		  }, function() { 
-		  	$('#menu-item-11 > a').css("color", colorClick)
-		  }
-		);
-
-		$('.template-tc__title > h1').css("color", colorClick);
-		$('strong').css("color", colorClick);
-		$('h2').css("color", colorClick);
-		$('h1').css("color", colorClick);
-		$('.template-tc  a').css("color", colorClick);
-
-	}else {
-		$('#menu-item-11 > a').css("color", "black");
-	}
-});
-$(document).ready(function(){
-	var colorSelect = $('#menu-item-12 > a').css("color")
-	$('#menu-item-12 > a').css("color", "black");
-
- //  $('#menu-item-12').hover(function() {
-	//   	$('#menu-item-12 > a').css("color", colorSelect)
-	//   }, function() { 
-	//   	$('#menu-item-12 > a').css("color", "black")}
-	// );
-	if ($('#menu-item-12 > ul > li').hasClass("current_page_item")) {
-		var colorClick = $('.current_page_item > a').css("color")
-		$('#menu-item-12 > a').css("color", colorClick)
-		$('#menu-item-12').hover(function() {
-		  	// $('#menu-item-12 > a').css("color", colorSelect)
-		  }, function() { 
-		  	$('#menu-item-12 > a').css("color", colorClick)
-		  }
-		);
-
-		$('.template-tc__title > h1').css("color", colorClick);
-		$('strong').css("color", colorClick);
-		$('h2').css("color", colorClick);
-		$('h1').css("color", colorClick);
-		$('.template-tc  a').css("color", colorClick);
-
-	}else {
-		$('#menu-item-12 > a').css("color", "black");
-	}
-});
-$(document).ready(function(){
-	var colorSelect = $('#menu-item-13 > a').css("color")
-	$('#menu-item-13 > a').css("color", "black");
-
- //  $('#menu-item-13').hover(function() {
-	//   	$('#menu-item-13 > a').css("color", colorSelect)
-	//   }, function() { 
-	//   	$('#menu-item-13 > a').css("color", "black")}
-	// );
-	if ($('#menu-item-13 > ul > li').hasClass("current_page_item")) {
-		var colorClick = $('.current_page_item > a').css("color")
-		$('#menu-item-13 > a').css("color", colorClick)
-		$('#menu-item-13').hover(function() {
-		  	// $('#menu-item-13 > a').css("color", colorSelect)
-		  }, function() { 
-		  	$('#menu-item-13 > a').css("color", colorClick)
-		  }
-		);
-
-		$('.template-tc__title > h1').css("color", colorClick);
-		$('strong').css("color", colorClick);
-		$('h2').css("color", colorClick);
-		$('h1').css("color", colorClick);
-		$('.template-tc  a').css("color", colorClick);
-
-	}else {
-		$('#menu-item-13 > a').css("color", "black");
-	}
-});
-$(document).ready(function(){
-	var colorSelect = $('#menu-item-14 > a').css("color")
-	$('#menu-item-14 > a').css("color", "black");
-
- //  $('#menu-item-14').hover(function() {
-	//   	$('#menu-item-14 > a').css("color", colorSelect)
-	//   }, function() { 
-	//   	$('#menu-item-14 > a').css("color", "black")}
-	// );
-	if ($('#menu-item-14 > ul > li').hasClass("current_page_item")) {
-		var colorClick = $('.current_page_item > a').css("color")
-		$('#menu-item-14 > a').css("color", colorClick)
-		$('#menu-item-14').hover(function() {
-		  	// $('#menu-item-14 > a').css("color", colorSelect)
-		  }, function() { 
-		  	$('#menu-item-14 > a').css("color", colorClick)
-		  }
-		);
-
-		$('.template-tc__title > h1').css("color", colorClick);
-		$('strong').css("color", colorClick);
-		$('h2').css("color", colorClick);
-		$('h1').css("color", colorClick);
-		$('.template-tc  a').css("color", colorClick);
-		
-	}else {
-		$('#menu-item-14 > a').css("color", "black");
-	}
-});
-
-$(document).ready(function(){
-	var photo = $('.gallery > .gallery__items > img')
-	var destak = $('.gallery > .gallery__destak > img')
-
-	// destak.attr('src', firstphoto.currentTarget.currentSrc)
-
-	photo.on('click', function(event){
-		destak.attr('src', event.currentTarget.currentSrc)
-
-	});
-
-});
-
-$(document).ready(function(){
-  $('.gallery > .gallery__items > img').on('click', function(event) {
-    $('html, body').animate({
-      scrollTop: $('#gallery').offset().top - 100
-    }, 500, function(){
-    });
-  });
-});
+window.onload = () => {
+  window.addEventListener('resize', onResize);
+  onResize()
+}
 
 
 

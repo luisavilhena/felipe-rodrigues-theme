@@ -117,7 +117,7 @@ function custom_post_type_projetos() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => [ "slug" => "projetos", "with_front" => true ],
+        "rewrite" => [ "slug" => "projetos", "with_front" => false, 'hierarchical' => true ],
         "query_var" => true,
         "menu_position" => 5,
         "menu_icon" => "dashicons-book-alt",
@@ -152,19 +152,17 @@ function custom_taxonomy_projeto() {
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
         "query_var" => true,
-        "rewrite" => [ 'slug' => 'projetos', 'with_front' => true, ],
+        "rewrite" => [ "slug" => "projetos", "with_front" => false, 'hierarchical' => true ],
         "show_admin_column" => true,
         "show_in_rest" => true,
         "rest_base" => "projeto",
         "rest_controller_class" => "WP_REST_Terms_Controller",
         "show_in_quick_edit" => true,
-        ];
+    ];
+
     register_taxonomy( "projeto", [ "projetos" ], $args );
 }
 add_action( 'init', 'custom_taxonomy_projeto' );
-
-
-
 
 
 
