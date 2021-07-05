@@ -18,13 +18,45 @@
 		padding-top: 18.4vh;
 		left: 1%;
 		img{
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			width: 20%;
-			height: 20%;
+			width: 20vw;
+			height: auto;
 		}
-
+		// > div {
+		// 	border: 1px solid @grey;
+		// 	span {
+		// 		display: block;
+		// 		width: 28vw;
+		// 		height: 1px;
+		// 		background-color: white;
+		// 	}
+		// 	span:first-of-type {
+		// 		transform-origin: bottom left;
+		// 		transform: rotate(45deg);
+		// 	}
+		// 	span:last-of-type {
+		// 		transform-origin: bottom left;
+		// 		transform: rotate(-45deg);
+		// 	}
+		// }
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			top:18.4vh;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			background-color: @grey;
+			opacity: 1;
+			border: 1px white solid;
+		}
+		&:hover {
+			&:after {
+				opacity: 0;
+				transition: opacity 1;
+			}
+		}
 	}
  	.page-template-page-structure__template-adorno {
 		> .page-template-page-structure__template-adorno-1 {

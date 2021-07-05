@@ -14,6 +14,10 @@ get_header(); ?>
 
 <main id="page-template-page-structure"class="">
 	<div class="page-template-page-structure__thumbnail">
+		<div>
+			<span></span>
+			<span></span>
+		</div>
 		<?php the_post_thumbnail(); ?>
 	</div>
 	<div class="page-template-page-structure__template-adorno">

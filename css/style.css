@@ -133,10 +133,10 @@ ul#main-menu {
 ul#main-menu a {
   text-decoration: none;
   color: #ffffff;
+  font-weight: 300;
   text-transform: uppercase;
   font-size: 18px;
   font-family: "Futura";
-  font-weight: 500;
 }
 ul#main-menu > li {
   padding: 10px 20px;
@@ -201,7 +201,7 @@ header .header-menu-container {
   text-decoration: none;
   font-family: 'Futura';
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 300;
 }
 #logo-anchor strong {
   font-weight: 600;
@@ -409,16 +409,68 @@ body #carousel-page .carousel-page__carousel__sliders {
   z-index: 10000000 !important;
   position: absolute !important;
   left: 2%;
-  top: 140px;
-  width: 20%;
+  top: 20%;
+  width: 295px;
+}
+body #carousel-page .carousel-page__carousel__sliders .slick-next {
+  display: flex !important;
+  top: 73vh;
+  right: -20px;
+  width: 2px;
+  height: 25px;
+  background-color: white;
+  animation: go-back 1s infinite alternate;
+}
+@keyframes go-back {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+body #carousel-page .carousel-page__carousel__sliders .slick-next:before {
+  content: "";
+  width: 2px;
+  height: 13px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  transform: rotate(27deg);
+  transform-origin: bottom right;
+}
+body #carousel-page .carousel-page__carousel__sliders .slick-next:after {
+  content: "";
+  width: 2px;
+  height: 13px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  transform: rotate(-27deg);
+  transform-origin: bottom right;
 }
 body #carousel-page .carousel-page__carousel__sliders .carousel-page__carousel__sliders-item {
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 295px !important;
   width: 295px !important;
   margin-bottom: 10px;
+}
+body #carousel-page .carousel-page__carousel__sliders .carousel-page__carousel__sliders-item:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.5;
 }
 body {
   overflow: hidden;
@@ -622,11 +674,25 @@ body #home .home__carousel__sliders.slick-slider .slick-list .home__carousel__sl
   left: 1%;
 }
 .page-template-page-structure .page-template-page-structure__thumbnail img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 20%;
-  height: 20%;
+  width: 20vw;
+  height: auto;
+}
+.page-template-page-structure .page-template-page-structure__thumbnail:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 18.4vh;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #1c1c1c;
+  opacity: 1;
+  border: 1px white solid;
+}
+.page-template-page-structure .page-template-page-structure__thumbnail:hover:after {
+  opacity: 0;
+  transition: opacity 1;
 }
 .page-template-page-structure .page-template-page-structure__template-adorno > .page-template-page-structure__template-adorno-1 {
   z-index: 10000000000;
