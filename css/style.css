@@ -650,6 +650,7 @@ body #home .home__carousel__sliders.slick-slider .slick-next:after {
 }
 body #home .home__carousel__sliders.slick-slider .slick-list .home__carousel__sliders-item {
   cursor: pointer;
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

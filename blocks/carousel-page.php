@@ -29,6 +29,7 @@ function fr_carousel_page() {
 						INFORMAÇÕES
 					</div>
 					<?php endif; ?>
+					<?php if ($block['texto']) : ?>
 					<div class="carousel-page__btns-next-page">
 						<?php  c2c_next_or_loop_post_link('%link', 'PRÓXIMO'); ?>
 						<div class="carousel-page__btns-next-page__symbol">
@@ -37,6 +38,7 @@ function fr_carousel_page() {
 						 	<span></span>
 						</div>
 					</div>
+					<?php endif; ?>
 					<?php if ($block['texto']) : ?>
 					<div class="carousel-page__btns-btn-description">
 						<?php echo $block['texto'] ?>					
