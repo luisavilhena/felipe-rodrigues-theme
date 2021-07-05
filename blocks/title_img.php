@@ -4,10 +4,10 @@
 use Carbon_Fields\Block;
 use Carbon_Fields\Field;
  
-add_action( 'after_setup_theme', 'tc' );
+add_action( 'after_setup_theme', 'fr' );
  
-function tc_title_img() {
-	Block::make( 'Título e imagem' )
+function fr_page_structure() {
+	Block::make( 'Estrutura de página' )
 		->add_fields( array(
 			Field::make( 'text', 'title', 'Título' ),
 			Field::make( 'image', 'img', 'Imagem' ),
@@ -36,4 +36,4 @@ function tc_title_img() {
 			// return ob_get_flush();
 		} );
 }
-add_action( 'carbon_fields_register_fields', 'tc_title_img' );
+add_action( 'carbon_fields_register_fields', 'fr_page_structure' );

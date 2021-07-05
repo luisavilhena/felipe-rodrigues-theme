@@ -11,54 +11,53 @@ function menuButtonOpen() {
 }
 
 $(document).ready(function(){
-	$('.project__carousel__img').slick({
+	$('.home__carousel__img').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
 		fade: true,
-		asNavFor: '.project__carousel__sliders'
+		asNavFor: '.home__carousel__sliders'
 	});
-	$('.project__carousel__sliders').slick({
-		slidesToShow: 3,
+	$('.home__carousel__sliders').slick({
+		slidesToShow: 4,
 		slidesToScroll: 1,
-	 	asNavFor: '.project__carousel__img',
-	 	centerMode: true,
+	 	asNavFor: '.home__carousel__img',
 	 	focusOnSelect: true,
 	  vertical: true,
 	  verticalSwiping: true,
 	});
 
-	$('.project__carousel__sliders').on("click", function(event) {
-		// $('.project__carousel__img').css('display', 'block')
+	$('.home__carousel__sliders').on("click", function(event) {
+		// $('.home__carousel__img').css('display', 'block')
 		setTimeout(function(){
-			$('.project__img-pb').css('display', 'none')
+			$('.home__img-pb').css('display', 'none')
 		}, 100)
 	})
 
-	$('.project__btns-btn').on("click", function(event) {
-		$('.project__carousel__sliders.slick-slider').animate({
+	$('.home__btns-btn').on("click", function(event) {
+		$('.home__carousel__sliders.slick-slider').animate({
 		  left: "1%"
 		}, 600, "linear");
-		$('.project__btns-btn-description').css('color', 'white')
-		$('.project__btns-btn-description').css('transition', 'color 0.5s')
-		$('.project__btns-btn__symbol span:nth-of-type(2n)').css('transform', 'rotate(90deg)')
-		$('.project__btns-btn__symbol span:nth-of-type(2n)').css('transition', 'transform 0.5s')
+		$('.home__btns-btn-description').css('color', 'white')
+		$('.home__btns-btn-description').css('transition', 'color 0.5s')
+		$('.home__btns-btn__symbol span:nth-of-type(2n)').css('transform', 'rotate(90deg)')
+		$('.home__btns-btn__symbol span:nth-of-type(2n)').css('transition', 'transform 0.5s')
 	})
 
-	////////////carrossel publicação
+	////////////carousel-page
 
 
-		$('.publication__carousel__img').slick({
+		$('.carousel-page__carousel__img').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: false,
 			fade: true,
-			asNavFor: '.publication__carousel__sliders'
+			asNavFor: '.carousel-page__carousel__sliders'
 		});
-		$('.publication__carousel__sliders').slick({
+		$('.carousel-page__carousel__sliders').slick({
 			slidesToShow: 3,
 			slidesToScroll: 1,
-		 	asNavFor: '.publication__carousel__img',
+		 	asNavFor: '.carousel-page__carousel__img',
 		 	centerMode: true,
 		 	focusOnSelect: true,
 		  vertical: true,

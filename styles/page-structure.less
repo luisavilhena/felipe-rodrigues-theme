@@ -1,0 +1,54 @@
+.page-template-page-structure {
+	background-color: @grey;
+	overflow: hidden;
+	ul#main-menu {
+		> li:hover {
+			> ul {
+				left: -12%;
+				right: -8%;
+				background-color: @grey;
+				li {
+					padding-left: 10%;
+				}
+			}
+		}
+	} 
+	.page-template-page-structure__thumbnail{
+		position: absolute;
+		padding-top: 18.4vh;
+		left: 1%;
+		img{
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 20%;
+			height: 20%;
+		}
+
+	}
+ 	.page-template-page-structure__template-adorno {
+		> .page-template-page-structure__template-adorno-1 {
+			z-index: 10000000000;
+			position: absolute;
+			right: 20%;
+			top: 0;
+			background-color: white;
+			width: 1px;
+			height: @heightadorno;
+		}
+	}
+	.page-template-page-structure__content {
+		margin-left: 25%;
+		padding-top: 18.4vh;
+		margin-right: 20%;
+
+		> h1, 
+		> h2, 
+		> h3,
+		> h4,
+		> p {
+			margin-left: 12.5%;
+			margin-right: 8%;
+		}
+	}
+}

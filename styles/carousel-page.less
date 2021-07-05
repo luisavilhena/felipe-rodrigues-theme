@@ -1,9 +1,10 @@
 @import './structure.less';
 
-.single-projetos {
+body {
 	overflow: hidden;
-	#project {
-		.project__btns {
+	height: 100vh;
+	#carousel-page {
+		.carousel-page__btns {
 			position: absolute;
 			display: flex;
 			justify-content: center;
@@ -11,13 +12,13 @@
 			right: 30px;
 			top: 70px;
 			z-index: 100000000000;
-			.project__btns-btn {
+			.carousel-page__btns-btn {
 				cursor: pointer;
 				position: relative;
 				font-weight: 300;
 				font-size: 18px;
 				padding-right: 30px;
-				.project__btns-btn__symbol {
+				.carousel-page__btns-btn__symbol {
 					position: absolute;
 					display: block;
 					left: -20px;
@@ -39,7 +40,7 @@
 					}
 				}
 			}
-			.project__btns-next-page {
+			.carousel-page__btns-next-page {
 				position: relative;
 				display: flex;
 				a {
@@ -48,7 +49,7 @@
 					color: white;
 					text-decoration: none;
 				}
-				.project__btns-next-page__symbol {
+				.carousel-page__btns-next-page__symbol {
 					display: flex;
 					flex-direction: column;
 					align-items: flex-end;
@@ -77,11 +78,11 @@
 				}
 
 			}
-			.project__btns-btn-description {
+			.carousel-page__btns-btn-description {
 				position: absolute;
 				top: 60px;
 				left: 0;
-				color: transparent;
+				color: white;
 				h2 {
 					margin-bottom: 0px;
 				}
@@ -98,59 +99,38 @@
 				}
 			}
 		}
-		.project__img-pb{
-			position: absolute;
-			top: 0;
-			z-index: 1000000;
-			height: 100vh;
-			width: 100%;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
-			filter: grayscale(100%);
-		}
+
 		.slick-arrow {
 			display: none !important;
 		}
-		.project__carousel__img {
-			z-index: 1000;
+		.carousel-page__carousel__img {
+			height: 100vh;
 			// display: none;
 			margin: 0 auto 60px auto;
 
-			.slick-list{
-			padding: 0 !important;	
-				.slick-track {
-					// padding-top: 200px;
-				}
-				.project__carousel__img-item {
-					background-repeat: no-repeat;
-					background-position: center;
-					background-size: cover;
-					height: 100vh !important;
-				}
-				.project__carousel__img-item .slick-slide .slick-current .slick-active {
-					height: 100vh !important;
-				}
-			}
-			.slick-next {
+			.carousel-page__carousel__img-item {
+				z-index: 1 !important;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 100vh !important;
 			}
 		}
-		.project__carousel__sliders.slick-slider {
-			z-index: 10000000;
+
+		.carousel-page__carousel__sliders {
+			z-index: 10000000 !important;
 			position: absolute !important;
-			left: -600px;
+			left: 2%;
 			top: 140px;
 			width: 20%;
-			.slick-list {	
-				.project__carousel__sliders-item {
-					background-repeat: no-repeat;
-					// background-position: center;
-					background-size: contain;
-					min-height: 180px !important;
-					height: auto;
-					width: 100% !important;
-					margin-bottom: 10px;
-				}
+		
+			.carousel-page__carousel__sliders-item {
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				height: 295px !important;
+				width: 295px !important;
+				margin-bottom: 10px;
 			}
 		}
 	}
