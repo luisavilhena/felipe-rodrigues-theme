@@ -55,10 +55,9 @@ $(document).ready(function(){
 			asNavFor: '.carousel-page__carousel__sliders'
 		});
 		$('.carousel-page__carousel__sliders').slick({
-			slidesToShow: 3,
+			slidesToShow: 4,
 			slidesToScroll: 1,
 		 	asNavFor: '.carousel-page__carousel__img',
-		 	centerMode: true,
 		 	focusOnSelect: true,
 		  vertical: true,
 		  verticalSwiping: true,

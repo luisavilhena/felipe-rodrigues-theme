@@ -20,7 +20,7 @@ function fr_carousel_page() {
 			?>
 			<div id="carousel-page">
 				<div class="carousel-page__btns">
-					<?php if ($carousel['texto']) : ?>
+					<?php if ($block['texto']) : ?>
 					<div class="carousel-page__btns-btn">
 						<div class="carousel-page__btns-btn__symbol">
 							<span></span>
@@ -37,7 +37,7 @@ function fr_carousel_page() {
 						 	<span></span>
 						</div>
 					</div>
-					<?php if ($carousel['texto']) : ?>
+					<?php if ($block['texto']) : ?>
 					<div class="carousel-page__btns-btn-description">
 						<?php echo $block['texto'] ?>					
 					</div>
