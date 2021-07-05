@@ -649,12 +649,23 @@ body #home .home__carousel__sliders.slick-slider .slick-next:after {
   transform-origin: bottom right;
 }
 body #home .home__carousel__sliders.slick-slider .slick-list .home__carousel__sliders-item {
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 295px !important;
   width: 295px !important;
   margin-bottom: 10px;
+}
+body #home .home__carousel__sliders.slick-slider .slick-list .home__carousel__sliders-item:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.5;
 }
 .page-template-page-structure {
   background-color: #1c1c1c;

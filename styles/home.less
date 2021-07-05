@@ -184,12 +184,25 @@ body {
 			}
 			.slick-list {	
 				.home__carousel__sliders-item {
+					cursor: pointer;
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: cover;
 					height: 295px !important;
 					width: 295px !important;
 					margin-bottom: 10px;
+					&:hover {
+						&:after {
+							content: "";
+							position: absolute;
+							top:0;
+							bottom: 0;
+							right: 0;
+							width: 100%;
+							background-color: rgb(0,0,0);
+							opacity: 0.5;
+						}
+					}
 				}
 			}
 		}
