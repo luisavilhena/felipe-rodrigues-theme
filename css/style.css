@@ -161,6 +161,9 @@ ul#main-menu > li:hover > ul > li {
   white-space: nowrap;
   padding: 10px 20px 10px 0px;
 }
+ul#main-menu > li:hover > ul > li:hover > a {
+  font-style: italic;
+}
 @media screen and (max-width: 580px) {
   ul#main-menu {
     display: none;
