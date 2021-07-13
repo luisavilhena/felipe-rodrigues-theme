@@ -188,9 +188,55 @@ body {
 				}
 			}
 		}
-
 	}
 }
+@media screen and (max-width: @screen-sm) {
+	body.projetos-template-default,
+	body.post-template-default {
+		overflow: auto;
+	}
+	body {
+			#carousel-page {
+				.carousel-page__btns {
+					z-index: 0;
+					.carousel-page__btns-btn {
+						display: none;
+						.carousel-page__btns-btn__symbol {
+						}
+					}
+					.carousel-page__btns-next-page {
+						display: none;
+						.carousel-page__btns-next-page__symbol {
+						}
+
+					}
+					.carousel-page__btns-btn-description {
+						right: -30px;
+						left: -143px;
+						z-index: 1;
+					}
+				}
+				.carousel-page__carousel__sliders {
+					position: relative !important;
+					left: 0;
+					width: auto;
+					.carousel-page__carousel__sliders-item {
+						margin-bottom: 0px !important;
+						width: auto !important;
+					}
+				}
+				.carousel-page__carousel__img {
+					margin: 0px;
+					.carousel-page__carousel__img-item {
+						display: none;
+					}
+					.carousel-page__carousel__img-item:first-child {
+						display: block;
+					}
+				}
+			}
+		}
+	}
 
 
 

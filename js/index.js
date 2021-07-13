@@ -8,7 +8,29 @@ menuButtonClose.addEventListener('click', menuButtonOpen)
 
 function menuButtonOpen() {
 	mainHeader.classList.toggle("menu-open")
+	
 }
+$(document).ready(function(){
+	if ($(window).width() > 600) {
+	////////////carousel-page
+
+		$('.carousel-page__carousel__img').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.carousel-page__carousel__sliders'
+		});
+		$('.carousel-page__carousel__sliders').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+		 	asNavFor: '.carousel-page__carousel__img',
+		 	focusOnSelect: true,
+		  vertical: true,
+		  verticalSwiping: true,
+		});
+	}
+})
 
 $(document).ready(function(){
 	$('.home__carousel__img').slick({
@@ -44,24 +66,6 @@ $(document).ready(function(){
 		$('.home__btns-btn__symbol span:nth-of-type(2n)').css('transition', 'transform 0.5s')
 	})
 
-	////////////carousel-page
-
-
-		$('.carousel-page__carousel__img').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			fade: true,
-			asNavFor: '.carousel-page__carousel__sliders'
-		});
-		$('.carousel-page__carousel__sliders').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-		 	asNavFor: '.carousel-page__carousel__img',
-		 	focusOnSelect: true,
-		  vertical: true,
-		  verticalSwiping: true,
-		});
 
 });
 

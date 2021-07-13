@@ -3,22 +3,22 @@
 
 header {
 	padding: 70px 1%;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	left: 0;
 	display: flex;
 	align-items: center;
-	z-index: 1000000000;
+	z-index: 100000000000000000000;
 	font-family: Futura;
-
-	@media screen and (max-width: @screen-sm)  {
-	}
 
 	.header-menu-container {
 		position: absolute;
 		left: 31.8%;
 		top: 60px;
+	}
+	.adorno-menu {
+		display: none;
 	}
 }
 #logo-anchor {
@@ -27,6 +27,7 @@ header {
 	font-family: 'Futura';
 	font-size: 18px;
 	font-weight: 300;
+	z-index: 10;
 	strong {
 		// font-family: 'Futura';
 
@@ -45,7 +46,11 @@ header {
 }
 
 @media screen and (max-width: @screen-sm) {
+	#logo-anchor {
+		font-size: 15px;
+	}
 	#mobile-menu-trigger {
+		z-index: 10;
 		border: none;
 		background-color: transparent;
 		position: relative;
@@ -91,6 +96,9 @@ header {
 		}
 	}
 	header.menu-open {
+		.adorno-menu {
+			display: block;
+		}
 		#mobile-menu-trigger	{
 			.mobile-menu-trigger__vertical	{
 				span:nth-child(2n) {
@@ -101,6 +109,14 @@ header {
 		}
 	}
 	header {
-		padding: 20px;
+		padding: 20px 1%;
+		position: fixed;
+		justify-content: space-between;
+		.header-menu-container{
+			top: 0;
+			left: 0;
+			width: 100%;
+
+		}
 	}
 }

@@ -10,7 +10,7 @@ body {
 			align-items: flex-start;
 			right: 30px;
 			top: 70px;
-			z-index: 100000000000;
+			z-index: 10000000000;
 			.home__btns-btn {
 				cursor: pointer;
 				position: relative;
@@ -102,7 +102,7 @@ body {
 		.home__img-pb{
 			position: absolute;
 			top: 0;
-			z-index: 1000000;
+			z-index: 1000;
 			height: 100vh;
 			width: 100%;
 			background-repeat: no-repeat;
@@ -114,7 +114,7 @@ body {
 			display: none;
 		}
 		.home__carousel__img {
-			z-index: 1000;
+			// z-index: 1000;
 			// display: none;
 			margin: 0 auto 60px auto;
 
@@ -205,6 +205,17 @@ body {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+@media screen and (max-width: @screen-sm) {
+	body.home {
+		overflow: hidden;
+		#home {
+			// overflow: hidden;
+			.home__btns {
+				display: none;
 			}
 		}
 	}

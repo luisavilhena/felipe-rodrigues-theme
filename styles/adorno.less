@@ -1,40 +1,7 @@
 .adorno {
-	// .adorno-1 {
-	// 	z-index: 10000000000;
-	// 	position: absolute;
-	// 	left: 25%;
-	// 	top: 0;
-	// 	background-color: white;
-	// 	width: 2px;
-	// 	height: 75vh;
-	// }
-	// .adorno-2 {
-	// 	z-index: 10000000000;
-	// 	position: absolute;
-	// 	top: 75vh;
-	// 	left: 25%;
-	// 	background-color: white;
-	// 	right: 0;
-	// 	height: 2px;
-	// }
-	// 	.adorno-3 {
-	// 	z-index: 10000000000;
-	// 	position: absolute;
-	// 	// bottom: 0;
-	// 	top: 75vh;
-	// 	left: 0%;
-	// 	// left: 0;
-	// 	height: 26vh;
-	// 	// background-color: white;
-	// 	// width: 1px;
-	// 	// transform-origin: bottom left;
-	// 	// transform: rotate(45deg);
-	// 	width:25%;
-	// 	background: linear-gradient(to bottom right, transparent  calc(50% - 2px), white, transparent calc(50% + 2px) )
-	// }
 
 	.adorno-1 {
-		z-index: 10000000000;
+		z-index: 1000000000;
 		position: absolute;
 		left: 25%;
 		top: 0;
@@ -43,7 +10,7 @@
 		height: @heightadorno;
 	}
 	.adorno-2 {
-		z-index: 10000000000;
+		z-index: 1000000000;
 		position: absolute;
 		top: @heightadorno;
 		left: 25%;
@@ -52,7 +19,7 @@
 		height: 1px;
 	}
 	.adorno-3 {
-		z-index: 10000000000;
+		z-index: 1000000000;
 		position: absolute;
 		top: @heightadorno;
 		left: 25%;
@@ -62,6 +29,72 @@
     transform-origin: top right;
 	}
 }
+
+.adorno-contract {
+	.adorno-contract-1 {
+		z-index: 10000000000;
+		position: absolute;
+		left: 25%;
+		top: 0;
+		background-color: white;
+		width: 2px;
+		height: @heightadorno;
+	}
+	.adorno-contract-2 {
+		z-index: 10000000000;
+		position: absolute;
+		top: @heightadorno;
+		left: 25%;
+		background-color: white;
+		right: 0;
+		height: 2px;
+	}
+		.adorno-contract-3 {
+		z-index: 10000000000;
+		position: absolute;
+		// bottom: 0;
+		top: @heightadorno;
+		left: 0%;
+		// left: 0;
+		height: 20vh;
+		// background-color: white;
+		// width: 1px;
+		// transform-origin: bottom left;
+		// transform: rotate(45deg);
+		width:25%;
+		background: linear-gradient(to bottom right, transparent  calc(50% - 2px), white, transparent calc(50% + 2px) )
+	}
+}
+@media screen and (max-width: @screen-sm) {
+	.adorno {
+
+		.adorno-1 {
+			left: @widthadorno;
+		}
+		.adorno-2 {
+			left: @widthadorno;
+		}
+		.adorno-3 {
+			left: @widthadorno;
+		}
+	}
+	.adorno-contract {
+		.adorno-contract-1{
+			left: @widthadorno;
+			height: @heightadorno-contract;
+
+		}
+		.adorno-contract-2{
+			left: @widthadorno;
+			top: @heightadorno-contract;
+		}
+		.adorno-contract-3{
+			width: @widthadorno;
+			top: @heightadorno-contract;
+		}
+	}
+}
+
 
 
 // @media screen and (max-width: 1315px) {

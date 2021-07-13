@@ -68,7 +68,13 @@
           'theme_location' => 'main-menu',
           'menu_id'        => 'main-menu',
         ));
+
       ?>
+      <div class="adorno-menu">
+        <div class="adorno-menu-1"></div>
+        <div class="adorno-menu-2"></div>
+        <div class="adorno-menu-3"></div>
+      </div>
 
     </nav>
 	  

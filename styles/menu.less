@@ -13,8 +13,13 @@ ul#main-menu {
 		padding: 10px 20px;
 		> ul {
 			display: none;
-			li {
-
+			padding-top: 20px;
+			left: 0;
+			right: 0;
+			position: absolute;
+			> li {
+				white-space: nowrap;
+				padding: 10px 20px 10px 0px;
 			}
 		}
 	}
@@ -26,14 +31,8 @@ ul#main-menu {
 			font-style: italic;
 		}
 		> ul {
-			padding-top: 20px;
-			position: absolute;
-			left: 0;
-			right: 0;
 			display: block;
 			> li {
-				white-space: nowrap;
-				padding: 10px 20px 10px 0px;
 			}
 			> li:hover {
 				> a {
@@ -45,21 +44,87 @@ ul#main-menu {
 }
 
 @media screen and (max-width: @screen-sm) {
-	ul#main-menu {
+	.menu-menu-1-container {
 		display: none;
 	}
 	header.menu-open	{
 		background-color: @grey;
-		ul#main-menu	{
+		.menu-menu-1-container {
 			position: absolute;
 			left: 0;
 			right: 0;
-			top: 55px;
-			min-height: 100vh;
+			top: 0px;
+			min-height: 80vh;
 			margin-left: 0;
 			display: block;
-			flex-direction: column;
 			background-color: @grey;
+			padding-bottom: 100px;
+			ul#main-menu	{
+				border-left: 1px solid white;
+				border-bottom: 1px solid white;
+				min-height: 80vh;
+				// position: absolute;
+				// left: 0;
+				// right: 0;
+				// top: 60px;
+				// // padding-top: 60px;
+				// min-height: 100vh;
+				// margin-left: 0;
+				// display: block;
+				margin-left: @widthadorno;
+				flex-direction: column;
+				// background-color: @grey;
+				li {
+					border-top: 1px solid white;
+				}
+				> li {
+					padding: 30px 0px;
+					a {
+						padding-left: 20px;
+					}
+					> ul {
+						position: unset;
+						> li {
+							padding: 10px 0px;
+							a {
+								padding-left: 50px;
+								position: relative;
+							}
+							a:before {
+								content: "";
+								position: absolute;
+								top: 10px;
+								left: 20px;
+								display: block;
+								width: 20px;
+								height: 1px;
+								background-color: white;
+
+							}
+						}
+					}
+				}
+				> li:first-child {
+					margin-top: 100px;
+					padding: 30px 0px;
+				}
+				> li:last-child {
+					border-bottom: 1px solid white;
+				}
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0%;
+				height: 100px;
+				background-color: white;
+				width: 1px;
+				transform-origin: bottom left;
+				// transform: rotate(45deg);
+				width:@widthadorno;
+				background: linear-gradient(to bottom right, transparent  calc(50% - 2px), white, transparent calc(50% + 2px) )
+			}
 		}
 	}
 }

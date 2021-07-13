@@ -84,3 +84,52 @@
 		}
 	}
 }
+@media screen and (max-width: @screen-sm) {
+	.page-template-page-structure {
+		overflow: auto;
+		position: relative;
+		header {
+			background-color: @grey;
+		}
+		header.menu-open ~ #page-template-page-structure .page-template-page-structure__content .adorno-contract{
+			display: none;
+		}
+		.page-template-page-structure__thumbnail {
+			margin-left: 45%;
+			padding-top: 13vh;
+			img {
+				width: 52vw;
+			}
+			&:after {
+				top: 13vh;
+			}
+		}
+		.page-template-page-structure__template-adorno {
+			> .page-template-page-structure__template-adorno-1 {
+				display: none;
+			}
+		}
+		.page-template-page-structure__content {
+			display: flex;
+			flex-direction: column;
+			padding-right: 1%;
+			margin-right: 0px;
+			margin-left: 0px;
+
+			> p:first-of-type {
+				margin-top: 54vh;
+			}
+			> p {
+				margin-right: 1%;
+				margin-left: 1%
+			}
+			///////////inverte a ordem no mobile
+			.wp-block-contact-form-7-contact-form-selector {
+				order: 2;
+			}
+			.address {
+				order: 1;
+			}
+		}
+	}
+}

@@ -13,6 +13,7 @@ get_header(); ?>
 
 
 <main id="page-template-page-structure"class="">
+	<?php if (has_post_thumbnail()) : ?>
 	<div class="page-template-page-structure__thumbnail">
 		<div>
 			<span></span>
@@ -20,6 +21,7 @@ get_header(); ?>
 		</div>
 		<?php the_post_thumbnail(); ?>
 	</div>
+	<?php endif; ?>
 	<div class="page-template-page-structure__template-adorno">
 		<div class="page-template-page-structure__template-adorno-1"></div>
 	</div>
