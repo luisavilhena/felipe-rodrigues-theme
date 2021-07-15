@@ -26,6 +26,7 @@ $(document).ready(function(){
 			swipeToSlide: false,
 			swipe: false,
 			asNavFor: '.carousel-page__carousel__sliders',
+			verticalScrolling: true,
 		});
 		$('.carousel-page__carousel__sliders').slick({
 			focusOnSelect: true,
@@ -58,6 +59,22 @@ $(document).ready(function(){
 	// $('.carousel-page__carousel__sliders').mouseout(function() {
 	// 	slickPause();
 	// });
+	const $sliderimg = $(".carousel-page__carousel__img");
+	$sliderimg.on('init', () => {
+			mouseWheel($sliderimg)
+	})
+	$sliderimg. on( 'wheel',  { $sliderimg: $sliderimg }, function(event){
+		event.preventDefault()
+		const $sliderimg = event.data.$sliderimg
+		const delta = event.originalEvent.deltaY
+		if(delta > 0) {
+			$sliderimg.slick('slickPrev')
+		}
+		else {
+			$sliderimg.slick('slickNext')
+		}
+	})
+
 	const $slider = $(".carousel-page__carousel__sliders");
 	$slider.on('init', () => {
 			mouseWheel($slider)
@@ -115,11 +132,27 @@ $(document).ready(function(){
 			  verticalScrolling: true,
 	});
 
+	const $sliderhomeimg = $(".home__carousel__img");
+	$sliderhomeimg.on('init', () => {
+			mouseWheel($sliderhomeimg)
+	})
+	$sliderhomeimg.on( 'wheel',  { $sliderhomeimg: $sliderhomeimg }, function(event){
+		event.preventDefault()
+		const $sliderhomeimg = event.data.$sliderhomeimg
+		const delta = event.originalEvent.deltaY
+		if(delta > 0) {
+			$sliderhomeimg.slick('slickPrev')
+		}
+		else {
+			$sliderhomeimg.slick('slickNext')
+		}
+	})
+
 	const $sliderhome = $(".home__carousel__sliders");
 	$sliderhome.on('init', () => {
 			mouseWheel($sliderhome)
 	})
-	$sliderhome. on( 'wheel',  { $sliderhome: $sliderhome }, function(event){
+	$sliderhome.on( 'wheel',  { $sliderhome: $sliderhome }, function(event){
 		event.preventDefault()
 		const $sliderhome = event.data.$sliderhome
 		const delta = event.originalEvent.deltaY

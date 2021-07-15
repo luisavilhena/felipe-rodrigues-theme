@@ -157,14 +157,16 @@ ul#main-menu > li > ul {
   display: none;
   margin-top: 8px;
   padding-top: 20px;
+  left: 0;
+  right: 0;
   position: absolute;
 }
 ul#main-menu > li > ul > li {
   white-space: nowrap;
-  padding: 10px 20px 10px 0px;
+  padding: 10px 20px 10px 20px;
 }
-ul#main-menu > li:first-child {
-  padding: 10px 20px 10px 0px;
+ul#main-menu > li:nth-child(3n) ul li {
+  margin-left: 44%;
 }
 ul#main-menu > li:hover > a {
   position: relative;
@@ -273,7 +275,7 @@ header {
 }
 header .header-menu-container {
   position: absolute;
-  left: 31.8%;
+  left: 30%;
   top: 60px;
 }
 header .adorno-menu {
@@ -364,7 +366,7 @@ header .adorno-menu {
   }
 }
 .home .adorno .adorno-1 {
-  animation: adorno1 3s linear;
+  animation: adorno1 2s linear;
 }
 @keyframes adorno1 {
   from {
@@ -375,32 +377,32 @@ header .adorno-menu {
   }
 }
 .home .adorno .adorno-2 {
-  animation: adorno2 3s linear;
+  animation: adorno2 2s linear;
 }
 @keyframes adorno2 {
   from {
-    left: 100%;
+    right: 75%;
   }
   to {
-    left: 80vh;
+    right: 0;
   }
 }
 .home .adorno .adorno-3 {
-  animation: adorno3 3s linear;
+  animation: adorno3 2s linear;
 }
 @keyframes adorno3 {
   from {
-    width: 0;
+    height: 0;
   }
   to {
-    width: 25%;
+    height: 20vh;
   }
 }
 .adorno .adorno-1 {
   z-index: 1000000000;
   position: absolute;
   left: 25%;
-  top: 0;
+  bottom: 20vh;
   background-color: white;
   width: 1px;
   height: 80vh;
@@ -422,7 +424,7 @@ header .adorno-menu {
   height: 20vh;
   background-color: white;
   width: 25%;
-  background: linear-gradient(to bottom right, transparent calc(50% - 1px), white, transparent calc(50% + 1px));
+  background: linear-gradient(to top left, transparent calc(50% - 1px), white, transparent calc(50% + 1px));
 }
 .adorno-contract .adorno-contract-1 {
   z-index: 10000000000;
@@ -437,7 +439,6 @@ header .adorno-menu {
   z-index: 10000000000;
   position: absolute;
   top: 80vh;
-  left: 25%;
   background-color: white;
   right: 0;
   height: 1px;
@@ -459,7 +460,7 @@ header .adorno-menu {
     left: 44%;
   }
   .adorno .adorno-3 {
-    left: 44%;
+    width: 44%;
   }
   .adorno-contract .adorno-contract-1 {
     left: 44%;
@@ -1157,7 +1158,7 @@ body {
 }
 @font-face {
   font-family: "Futura";
-  src: url('../resources/font/Futura-ttc') format('opentype');
+  src: url('../resources/font/Futura.ttc') format('opentype');
   font-weight: 500;
 }
 @font-face {
@@ -1275,6 +1276,7 @@ form.wpcf7-form textarea {
   font-weight: 300;
   border: 1px solid white;
   width: 87.6%;
+  border-radius: 0;
 }
 form.wpcf7-form input::placeholder {
   color: white;
