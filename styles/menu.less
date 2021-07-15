@@ -79,7 +79,7 @@ ul#main-menu {
 			left: 0;
 			right: 0;
 			top: 0px;
-			min-height: 80vh;
+			min-height: 100vh;
 			margin-left: 0;
 			display: block;
 			background-color: @grey;
@@ -87,7 +87,7 @@ ul#main-menu {
 			ul#main-menu	{
 				border-left: 1px solid white;
 				border-bottom: 1px solid white;
-				min-height: 80vh;
+				// min-height: 80vh;
 				// position: absolute;
 				// left: 0;
 				// right: 0;
@@ -109,6 +109,9 @@ ul#main-menu {
 						&:after {
 							display: none;
 						}
+					}
+					&:hover {
+						padding-bottom:0;
 					}
 					> ul {
 						position: unset;
@@ -143,7 +146,7 @@ ul#main-menu {
 			&:after {
 				content: "";
 				position: absolute;
-				bottom: 0;
+				// bottom: 0;
 				left: 0%;
 				height: 100px;
 				background-color: white;

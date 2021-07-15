@@ -152,13 +152,16 @@ $(document).ready(function(){
 	})
 
 	$('.home__btns-btn').on("click", function(event) {
-		$('.home__carousel__sliders.slick-slider').animate({
-		  left: "1%"
-		}, 600, "linear");
-		$('.home__btns-btn-description').css('color', 'white')
-		$('.home__btns-btn-description').css('transition', 'color 0.5s')
-		$('.home__btns-btn__symbol span:nth-of-type(2n)').css('transform', 'rotate(90deg)')
-		$('.home__btns-btn__symbol span:nth-of-type(2n)').css('transition', 'transform 0.5s')
+		// $('.home__carousel__sliders.slick-slider').animate({
+		//   left: "1%"
+		// }, 600, "linear");
+		$('.home__carousel__sliders.slick-slider').toggleClass("home__carousel__sliders--animation")
+		$('.home__btns-btn-description').toggleClass("home__btns-btn-description--animation")
+		$('.home__btns-btn__symbol').toggleClass("home__btns-btn__symbol--animation")
+		// $('.home__btns-btn-description').css('color', 'white')
+		// $('.home__btns-btn-description').css('transition', 'color 0.5s')
+		// $('.home__btns-btn__symbol span:nth-of-type(2n)').css('transform', 'rotate(90deg)')
+		// $('.home__btns-btn__symbol span:nth-of-type(2n)').css('transition', 'transform 0.5s')
 	})
 
 
@@ -168,35 +171,35 @@ $(document).ready(function(){
 
 
 //////////adorno
-const onResize = () => {
-  const adorno2 = document.querySelector('.adorno-2');
-  const adorno3 = document.querySelector('.adorno-3');
+// const onResize = () => {
+//   const adorno2 = document.querySelector('.adorno-2');
+//   const adorno3 = document.querySelector('.adorno-3');
 
   
-  // Pega a posição do canto inferior esquerdo da tela
-  const posicaoInferior = {
-    x: 0,
-    y: window.innerHeight
-  }
+//   // Pega a posição do canto inferior esquerdo da tela
+//   const posicaoInferior = {
+//     x: 0,
+//     y: window.innerHeight
+//   }
 
-  // Pega a posição do do .adorno-2, pois o angulo sera entre a posicao do .adorno-2 e o canto inferior esquerdo da tela
-  const posicaoAdorno = {
-    x: adorno2.offsetLeft,
-    y: adorno2.offsetTop
-  }
+//   // Pega a posição do do .adorno-2, pois o angulo sera entre a posicao do .adorno-2 e o canto inferior esquerdo da tela
+//   const posicaoAdorno = {
+//     x: adorno2.offsetLeft,
+//     y: adorno2.offsetTop
+//   }
 
-  // Formula para pegar o angulo entre 2 pontos
-  let angle = Math.atan2(posicaoAdorno.y - posicaoInferior.y, posicaoAdorno.x - posicaoInferior.x);
-  // Por padrao o angulo usa como unidade de medida o Radiano (que vai de 0 a Math.PI), aqui convertemos ele para graus
-  angle = angle * (180 / Math.PI)
+//   // Formula para pegar o angulo entre 2 pontos
+//   let angle = Math.atan2(posicaoAdorno.y - posicaoInferior.y, posicaoAdorno.x - posicaoInferior.x);
+//   // Por padrao o angulo usa como unidade de medida o Radiano (que vai de 0 a Math.PI), aqui convertemos ele para graus
+//   angle = angle * (180 / Math.PI)
 
-  adorno3.style.transform = `rotate(${angle + 90}deg)`;
-}
+//   adorno3.style.transform = `rotate(${angle + 90}deg)`;
+// }
 
-window.onload = () => {
-  window.addEventListener('resize', onResize);
-  onResize()
-}
+// window.onload = () => {
+//   window.addEventListener('resize', onResize);
+//   onResize()
+// }
 
 
 
