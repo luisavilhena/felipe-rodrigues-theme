@@ -2,6 +2,7 @@ form.wpcf7-form  {
 	// padding-left: 25%;
 	// padding-top: 80px;
 	// width: 87.6%;
+	padding-top: 18.4vh;
 
 	p.title {
 		padding-left: 12.5%;
@@ -50,10 +51,21 @@ form.wpcf7-form  {
 	}
 }
 @media screen and (max-width: @screen-sm) {
-	form {
+	form.wpcf7-form  {
 		margin-right: -1%;
 		margin-top: 34vh;
 		// position: absolute;
 		// bottom: 0;
+		p.title {
+			padding-left: 1%;
+
+		}
+		input, textarea {
+			padding-left: 1%;
+			width: 98.4%;
+		}
+		input[type="submit"] {
+			padding-left: 1%;
+		}
 	}
 }

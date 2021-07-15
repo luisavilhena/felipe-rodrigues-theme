@@ -1,5 +1,33 @@
-.adorno {
+.home {
+	.adorno {
+		.adorno-1 {
+			animation: adorno1 3s linear;
 
+			@keyframes adorno1 {
+			  from {
+			    height: 0;
+			  }
+			  to {
+			    height: @heightadorno;
+			  }
+			}
+		}
+		.adorno-2 {
+			animation: adorno2 3s linear;
+			@keyframes adorno2 {
+			  from {
+			    left: 100%;
+			  }
+			  to {
+			    left: @heightadorno;
+			  }
+			}
+		}
+		.adorno-3 {
+		}
+	}
+}
+.adorno {
 	.adorno-1 {
 		z-index: 1000000000;
 		position: absolute;
@@ -29,6 +57,7 @@
     transform-origin: top right;
 	}
 }
+
 
 .adorno-contract {
 	.adorno-contract-1 {

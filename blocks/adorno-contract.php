@@ -1,8 +1,4 @@
 <?php
-/**
- * Plugin Name: Filmes
- * Text Domain: filmes
- */
  
 use Carbon_Fields\Block;
 use Carbon_Fields\Field;

@@ -13,6 +13,7 @@ get_header(); ?>
 
 
 <main id="page-template-page-structure"class="">
+	<h1 class="page-template-page-structure__title"><?php the_title();  ?></h1>
 	<?php if (has_post_thumbnail()) : ?>
 	<div class="page-template-page-structure__thumbnail">
 		<div>
