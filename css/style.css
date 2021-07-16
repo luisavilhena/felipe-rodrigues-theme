@@ -439,6 +439,7 @@ header .adorno-menu {
   z-index: 10000000000;
   position: absolute;
   top: 80vh;
+  left: 25%;
   background-color: white;
   right: 0;
   height: 1px;
