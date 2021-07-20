@@ -117,7 +117,10 @@ ul#main-menu {
 							display: none;
 						}
 					}
-					&:hover {
+					&:first-child:hover {
+						padding-bottom:0;
+					}
+					&:nth-of-child(3n):hover {
 						padding-bottom:0;
 					}
 					> ul {
@@ -148,6 +151,13 @@ ul#main-menu {
 				}
 				> li:last-child {
 					border-bottom: 1px solid white;
+				}
+				>li:nth-child(3n) {
+					ul {
+						li {
+							margin-left: 0%;
+						}
+					}
 				}
 			}
 			&:after {

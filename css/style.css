@@ -220,7 +220,10 @@ ul#main-menu > li:hover > ul {
   header.menu-open .menu-menu-1-container ul#main-menu > li a:after {
     display: none;
   }
-  header.menu-open .menu-menu-1-container ul#main-menu > li:hover {
+  header.menu-open .menu-menu-1-container ul#main-menu > li:first-child:hover {
+    padding-bottom: 0;
+  }
+  header.menu-open .menu-menu-1-container ul#main-menu > li:nth-of-child(3n):hover {
     padding-bottom: 0;
   }
   header.menu-open .menu-menu-1-container ul#main-menu > li > ul {
@@ -249,6 +252,9 @@ ul#main-menu > li:hover > ul {
   }
   header.menu-open .menu-menu-1-container ul#main-menu > li:last-child {
     border-bottom: 1px solid white;
+  }
+  header.menu-open .menu-menu-1-container ul#main-menu > li:nth-child(3n) ul li {
+    margin-left: 0%;
   }
   header.menu-open .menu-menu-1-container:after {
     content: "";
@@ -319,9 +325,12 @@ header .adorno-menu {
     flex-direction: column;
   }
   #mobile-menu-trigger .mobile-menu-trigger__horizontal span {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     width: 28px;
     height: 2px;
+  }
+  #mobile-menu-trigger .mobile-menu-trigger__horizontal span:first-of-type {
+    margin-top: -1px;
   }
   #mobile-menu-trigger .mobile-menu-trigger__horizontal span:last-of-type {
     margin-bottom: 0;
@@ -332,20 +341,18 @@ header .adorno-menu {
     display: flex;
   }
   #mobile-menu-trigger .mobile-menu-trigger__vertical span {
-    height: 30px;
+    height: 24.5px;
     width: 2px;
-    margin-right: 12px;
-  }
-  #mobile-menu-trigger .mobile-menu-trigger__vertical span:first-of-type {
-    margin-left: -1px;
+    margin-right: 11px;
   }
   #mobile-menu-trigger .mobile-menu-trigger__vertical span:last-of-type {
     margin-right: 0;
   }
   #mobile-menu-trigger .mobile-menu-trigger__vertical span:nth-child(2n) {
-    margin-right: 13px;
+    margin-right: 11px;
     transform: rotate(0deg);
     transition: transform 0.5s;
+    height: 26spx;
   }
   header.menu-open .adorno-menu {
     display: block;
@@ -479,6 +486,13 @@ header .adorno-menu {
 body {
   overflow: hidden;
   height: 100vh;
+}
+body.single-post .carousel-page__btns-next-page__symbol {
+  display: none !important;
+}
+body.single-post .carousel-page__btns-btn-description {
+  width: 180px;
+  word-break: break-all;
 }
 body #carousel-page .carousel-page__btns {
   position: absolute;
@@ -922,6 +936,9 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
 .page-template-page-structure .page-template-page-structure__title {
   display: none;
 }
+.page-template-page-structure .page-template-page-structure__thumbnail-click div {
+  display: none;
+}
 .page-template-page-structure .page-template-page-structure__thumbnail {
   position: relative;
   padding-top: 18.4vh;
@@ -1135,7 +1152,8 @@ p {
   line-height: 17px;
   margin-bottom: 15px;
 }
-body {
+body,
+a {
   color: #ffffff;
   font-family: "Futura";
 }
