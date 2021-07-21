@@ -462,8 +462,9 @@ header .adorno-menu {
 }
 @media screen and (max-width: 580px) {
   .adorno .adorno-1 {
+    bottom: auto;
+    top: 0vh;
     left: 44%;
-    bottom: 8vh;
   }
   .adorno .adorno-2 {
     left: 44%;
