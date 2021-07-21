@@ -155,7 +155,7 @@ ul#main-menu > li a:after {
 }
 ul#main-menu > li > ul {
   display: none;
-  margin-top: 8px;
+  margin-top: 9px;
   padding-top: 20px;
   left: 0;
   right: 0;
@@ -463,6 +463,7 @@ header .adorno-menu {
 @media screen and (max-width: 580px) {
   .adorno .adorno-1 {
     left: 44%;
+    bottom: 8vh;
   }
   .adorno .adorno-2 {
     left: 44%;
