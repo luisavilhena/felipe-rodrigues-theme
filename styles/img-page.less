@@ -4,16 +4,16 @@ body {
 	overflow: hidden;
 	height: 100vh;
 	&.single-post {
-		.carousel-page__btns-next-page__symbol {
+		.img-page__btns-next-page__symbol {
 			display: none !important;
 		}
-		.carousel-page__btns-btn-description {
+		.img-page__btns-btn-description {
 			width: 180px;
 			word-break: break-all;
 		}
 	}
-	#carousel-page {
-		.carousel-page__btns {
+	#img-page {
+		.img-page__btns {
 			position: absolute;
 			display: flex;
 			justify-content: center;
@@ -21,13 +21,13 @@ body {
 			right: 30px;
 			top: 70px;
 			z-index: 100000000000;
-			.carousel-page__btns-btn {
+			.img-page__btns-btn {
 				cursor: pointer;
 				position: relative;
 				font-weight: 600;
 				font-size: 18px;
 				padding-right: 30px;
-				.carousel-page__btns-btn__symbol {
+				.img-page__btns-btn__symbol {
 					position: absolute;
 					display: block;
 					left: -20px;
@@ -49,7 +49,7 @@ body {
 					}
 				}
 			}
-			.carousel-page__btns-next-page {
+			.img-page__btns-next-page {
 				position: relative;
 				display: flex;
 				a {
@@ -58,7 +58,7 @@ body {
 					color: white;
 					text-decoration: none;
 				}
-				.carousel-page__btns-next-page__symbol {
+				.img-page__btns-next-page__symbol {
 					display: flex;
 					flex-direction: column;
 					align-items: flex-end;
@@ -87,7 +87,7 @@ body {
 				}
 
 			}
-			.carousel-page__btns-btn-description {
+			.img-page__btns-btn-description {
 				position: absolute;
 				top: 60px;
 				left: 0;
@@ -112,12 +112,12 @@ body {
 		.slick-arrow {
 			display: none !important;
 		}
-		.carousel-page__carousel__img {
+		.img-page__img__img {
 			height: 100vh;
 			// display: none;
 			margin: 0 auto 60px auto;
 
-			.carousel-page__carousel__img-item {
+			.img-page__img__img-item {
 				z-index: 1 !important;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -126,7 +126,7 @@ body {
 			}
 		}
 
-		.carousel-page__carousel__sliders {
+		.img-page__img__sliders {
 			z-index: 10000000 !important;
 			position: absolute !important;
 			left: 2%;
@@ -175,7 +175,7 @@ body {
 				}
 			}
 		
-			.carousel-page__carousel__sliders-item {
+			.img-page__img__sliders-item {
 				position: relative;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -205,49 +205,45 @@ body {
 		overflow: auto;
 	}
 	body {
-			#carousel-page {
-				.carousel-page__btns {
+			#img-page {
+				.img-page__btns {
 					z-index: 0;
-					.carousel-page__btns-btn {
+					.img-page__btns-btn {
 						display: none;
-						.carousel-page__btns-btn__symbol {
+						.img-page__btns-btn__symbol {
 						}
 					}
-					.carousel-page__btns-next-page {
+					.img-page__btns-next-page {
 						display: none;
-						.carousel-page__btns-next-page__symbol {
+						.img-page__btns-next-page__symbol {
 						}
 
 					}
-					.carousel-page__btns-btn-description {
+					.img-page__btns-btn-description {
 						right: -30px;
 						left: -143px;
 						top: 14.5vh;
 						z-index: 1;
 					}
 				}
-				.carousel-page__carousel__sliders {
+				.img-page__img__sliders {
 					position: relative !important;
 					left: 0;
 					width: auto;
-					.carousel-page__carousel__sliders-item {
+					.img-page__img__sliders-item {
 						margin-bottom: 0px !important;
 						width: auto !important;
 					}
 				}
-				.carousel-page__carousel__img {
+				.img-page__img__img {
 					margin: 0px;
-					.carousel-page__carousel__img-item {
+					.img-page__img__img-item {
 						display: none;
 					}
-					.carousel-page__carousel__img-item:first-child {
+					.img-page__img__img-item:first-child {
 						display: block;
 					}
 				}
 			}
 		}
 	}
-
-
-
-
