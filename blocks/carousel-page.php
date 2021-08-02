@@ -57,9 +57,9 @@ function fr_carousel_page() {
 				<div class="carousel-page__carousel__sliders">
 					<?php foreach ($block['carousel'] as $carousel) : ?>
 						<?php if ($carousel['img']) : ?>
-					<div class="carousel-page__carousel__sliders-item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
+					<a href="<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>" class="carousel-page__carousel__sliders-item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
 				
-					</div>
+					</a>
 						<?php endif; ?>
 					<?php endforeach;  ?>
 				</div>

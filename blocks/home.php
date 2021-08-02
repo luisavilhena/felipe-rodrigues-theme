@@ -1,6 +1,6 @@
 <?php
 add_image_size('ap_carousel_image_desktop_full_no_crop', 800 , 480, false);
-add_image_size('ap_image_desktop_full_no_crop', 2600 , 2600, false);
+add_image_size('ap_image_desktop_full_no_crop', 5000 , 3500, false);
 add_image_size('ap_image_2_desktop_full_no_crop', 1100 , 1100, false);
 add_image_size('ap_carousel_image_desktop_miniature_no_crop', 36, 32, false);
 add_image_size('cc__thumbnail_a4_vertical_no_crop', 420, 560, false);
@@ -61,9 +61,9 @@ function fr_home() {
 				<div class="home__carousel__sliders">
 					<?php foreach ($block['carousel'] as $carousel) : ?>
 						<?php if ($carousel['img']) : ?>
-					<div class="home__carousel__sliders-item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
+					<a href="<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>" class="home__carousel__sliders-item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
 				
-					</div>
+					</a>
 						<?php endif; ?>
 					<?php endforeach;  ?>
 				</div>

@@ -489,6 +489,16 @@ body {
   overflow: hidden;
   height: 100vh;
 }
+body .slick-lightbox {
+  z-index: 9999999999;
+}
+body .slick-lightbox .slick-prev,
+body .slick-lightbox .slick-arrow {
+  display: none !important;
+}
+body .slick-lightbox .slick-lightbox-close:before {
+  font-size: 34px;
+}
 body.single-post .carousel-page__btns-next-page__symbol {
   display: none !important;
 }
@@ -508,7 +518,7 @@ body #carousel-page .carousel-page__btns {
 body #carousel-page .carousel-page__btns .carousel-page__btns-btn {
   cursor: pointer;
   position: relative;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 18px;
   padding-right: 30px;
 }
@@ -686,7 +696,6 @@ body #carousel-page .carousel-page__carousel__sliders .carousel-page__carousel__
     display: none;
   }
   body #carousel-page .carousel-page__btns .carousel-page__btns-btn-description {
-    right: -30px;
     left: -143px;
     top: 14.5vh;
     z-index: 1;
@@ -725,7 +734,7 @@ body #home .home__btns {
 body #home .home__btns .home__btns-btn {
   cursor: pointer;
   position: relative;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 18px;
   padding-right: 30px;
 }
@@ -1327,7 +1336,6 @@ body #img-page .img-page__img__sliders .img-page__img__sliders-item:hover:after 
     display: none;
   }
   body #img-page .img-page__btns .img-page__btns-btn-description {
-    right: -30px;
     left: -143px;
     top: 14.5vh;
     z-index: 1;
@@ -1359,7 +1367,7 @@ h2,
 h3,
 h4,
 p {
-  font-family: 'Futura', sans-serif;
+  font-family: 'Futura';
 }
 h1 {
   font-weight: 500;
@@ -1398,36 +1406,24 @@ a {
   }
 }
 @font-face {
-  font-family: "Futura";
-  src: url('../resources/font/Futura light bt.ttf') format('opentype');
+  font-family: Futura;
+  src: url('../resources/font/futura-light-bt.ttf') format('truetype');
   font-weight: 300;
 }
 @font-face {
-  font-family: "Futura";
-  src: url('../resources/font/Futura.ttc') format('opentype');
+  font-family: Futura;
+  src: url('../resources/font/Futura-Medium-48.vlw') format('opentype');
   font-weight: 500;
 }
 @font-face {
-  font-family: "Futura";
-  src: url('../resources/font/Futura Heavy font.ttf') format('opentype');
+  font-family: Futura;
+  src: url('../resources/font/Futura-Heavy-font.ttf') format('truetype');
   font-weight: 600;
 }
 @font-face {
-  font-family: "Futura";
-  src: url('../resources/font/Futura Heavy font.ttf') format('opentype');
+  font-family: Futura;
+  src: url('../resources/font/Futura-Heavy-font.ttf') format('opentype');
   text-decoration: italic;
-}
-@font-face {
-  font-family: MinionPro-Regular;
-  src: url('../resources/font/MinionPro-Regular.otf') format('opentype');
-}
-@font-face {
-  font-family: CircularStd-Medium;
-  src: url('../resources/font/CircularStd-Medium.otf') format('opentype');
-}
-@font-face {
-  font-family: Arial;
-  src: url('../resources/font/arial.ttf') format('opentype');
 }
 #wpadminbar {
   z-index: 1000000000000000000 !important;

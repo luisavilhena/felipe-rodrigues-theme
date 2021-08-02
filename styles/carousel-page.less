@@ -3,6 +3,16 @@
 body {
 	overflow: hidden;
 	height: 100vh;
+	.slick-lightbox {
+		z-index: 9999999999;
+		.slick-prev,
+		.slick-arrow {
+			display: none !important;
+		}
+		.slick-lightbox-close:before {
+			font-size: 34px;
+		}
+	}
 	&.single-post {
 		.carousel-page__btns-next-page__symbol {
 			display: none !important;
@@ -24,7 +34,7 @@ body {
 			.carousel-page__btns-btn {
 				cursor: pointer;
 				position: relative;
-				font-weight: 600;
+				font-weight: 300;
 				font-size: 18px;
 				padding-right: 30px;
 				.carousel-page__btns-btn__symbol {
@@ -220,7 +230,7 @@ body {
 
 					}
 					.carousel-page__btns-btn-description {
-						right: -30px;
+						// right: -30px;
 						left: -143px;
 						top: 14.5vh;
 						z-index: 1;
