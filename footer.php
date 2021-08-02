@@ -25,6 +25,7 @@
 	</footer>
 
 	<?php wp_footer(); ?>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.10/slick-lightbox.min.js"></script>
 
 	</body>
 </html>
