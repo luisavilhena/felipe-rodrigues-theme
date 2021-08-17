@@ -1,3 +1,29 @@
-.post-template {
-	
+.post-template-default {
+	#carousel-page {
+		.carousel-page__carousel__img{
+			&:after {
+				content: '';
+				width: 100%;
+				background-color: grey;
+				opacity: 0.4;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
+		}
+		.carousel-page__carousel__sliders{
+			.carousel-page__carousel__sliders-item {
+				&:after {
+					content: '';
+					width: 100%;
+					background-color: grey;
+					opacity: 0.4;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: -1px;
+				}
+			}
+		}
+	}
 }

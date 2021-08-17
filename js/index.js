@@ -13,36 +13,43 @@ function menuButtonOpen() {
 $(document).ready(function(){
 	if ($(window).width() > 600) {
 	////////////carousel-page
+	$('.carousel-page__carousel__sliders').attr('dir', 'ltr');
+	// [dir='rtl'].slick-slide { float: top; }
 
 		$('.carousel-page__carousel__img').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: false,
+			// centerMode:true,
 			// autoplaySpeed: 0,
 			// speed: 0,
 			arrows: false,
-			// arrows: false,
 			fade: true,
 			swipeToSlide: false,
-			swipe: false,
+			// swipe: false,
 			asNavFor: '.carousel-page__carousel__sliders',
-			verticalScrolling: true,
+			// verticalScrolling: true,
+			infinite: true,
+			rtl: false,
+			// verticalReverse: true,
 		});
 		$('.carousel-page__carousel__sliders').slick({
-			focusOnSelect: true,
-			slidesToShow: 4,
+			rtl: false,
+			// centerMode:true,
+			// centerPadding: '600px',
+			// focusOnSelect: true,
+			slidesToShow: 2,
 			slidesToScroll: 1,
 			swipe: true,
+			// autoplay: true,
 		 	asNavFor: '.carousel-page__carousel__img',
-		 	// autoplay: true,
-	 	 //  autoplaySpeed: 1800,
-	 		// speed: 1500,
-	 		  // autoplaySpeed: 100,
+	 		infinite: true,
 	 		speed: 300,
 		  vertical: true,
 		  verticalSwiping: true,
 		  cssEase: 'linear',
 		  verticalScrolling: true,
+		  verticalReverse: true,
 		});
 		$('.carousel-page__carousel__sliders').slickLightbox({
 			src: false,
@@ -112,6 +119,18 @@ $(document).ready(function(){
 	// 		$slider.slick('slickNext')
 	// 	}
 	// }
+	$('.carousel-page__btns-btn').on("click", function(event) {
+		// $('.carousel-page__carousel__sliders.slick-slider').animate({
+		//   left: "1%"
+		// }, 600, "linear");
+		$('.carousel-page__carousel__sliders.slick-slider').toggleClass("carousel-page__carousel__sliders--animation")
+		$('.carousel-page__btns-btn-description').toggleClass("carousel-page__btns-btn-description--animation")
+		$('.carousel-page__btns-btn__symbol').toggleClass("carousel-page__btns-btn__symbol--animation")
+		// $('.home__btns-btn-description').css('color', 'white')
+		// $('.home__btns-btn-description').css('transition', 'color 0.5s')
+		// $('.home__btns-btn__symbol span:nth-of-type(2n)').css('transform', 'rotate(90deg)')
+		// $('.home__btns-btn__symbol span:nth-of-type(2n)').css('transition', 'transform 0.5s')
+	})
 })
 
 
@@ -274,6 +293,8 @@ $(document).ready(function(){
 //   window.addEventListener('resize', onResize);
 //   onResize()
 // }
+
+
 
 
 

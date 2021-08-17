@@ -14,11 +14,13 @@ function fr_address() {
 			// ob_start();
 			?>
 			<div class="address">
-				<h3>ENDEREÇOS</h3>
-				<div>
-					<a target="_blank" href="mailto:<?php echo carbon_get_theme_option('email'); ?>"><?php echo carbon_get_theme_option('email'); ?></a>
-					<a target="_blank" href="tel:<?php echo carbon_get_theme_option('tel'); ?>"><?php echo carbon_get_theme_option('tel'); ?></a>
-				</div>
+				<a target="_blank" href="mailto:<?php echo carbon_get_theme_option('email'); ?>"><?php echo carbon_get_theme_option('email'); ?></a>
+				<a target="_blank" href=" https://wa.me/<?php echo carbon_get_theme_option('tel'); ?>">
+					<img class="" src="<?php echo get_template_directory_uri() ?>/resources/icons/whatsapp.png">
+				</a>
+				<a target="_blank" href="<?php echo carbon_get_theme_option('instagram'); ?>">
+					<img class="" src="<?php echo get_template_directory_uri() ?>/resources/icons/instagram.png">
+				</a>
 			</div>
 			<?php
  
