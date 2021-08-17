@@ -23,7 +23,7 @@ function crb_attach_theme_options() {
             Field::make( 'text', 'email', 'E-mail' ),
             Field::make( 'text', 'tel', 'Telefone' ),
             // Field::make( 'text', 'facebook', 'Facebook' ),
-            // Field::make( 'text', 'instagram', 'Instagram' ),
+            Field::make( 'text', 'instagram', 'Instagram' ),
             // Field::make( 'text', 'vimeo', 'Vimeo' ),
             // Field::make( 'text', 'spotifty', 'Spotify' ),
             // Field::make( 'text', 'youtube', 'Youtube' ),

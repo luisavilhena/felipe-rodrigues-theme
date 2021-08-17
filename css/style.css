@@ -1082,17 +1082,20 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
 .address {
   bottom: 10vh;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   padding-left: 11.6%;
   font-weight: 300;
+  margin-top: -15px;
 }
-.address div a {
+.address a {
+  display: block;
   color: white;
   text-decoration: none;
   font-style: normal;
+  margin-right: 20px;
 }
-.address div a:first-of-type {
-  margin-right: 10px;
+.address img {
+  width: 30px;
 }
 @media screen and (max-width: 580px) {
   .address {
