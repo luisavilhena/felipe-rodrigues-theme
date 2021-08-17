@@ -499,9 +499,6 @@ body .slick-lightbox .slick-arrow {
 body .slick-lightbox .slick-lightbox-close:before {
   font-size: 34px;
 }
-body.single-post .carousel-page__btns-next-page__symbol {
-  display: none !important;
-}
 body.single-post .carousel-page__btns-btn-description {
   width: 180px;
   word-break: break-all;
@@ -1104,7 +1101,6 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
   align-items: center;
   padding-left: 11.6%;
   font-weight: 300;
-  margin-top: -15px;
 }
 .address a {
   display: block;
@@ -1142,24 +1138,9 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
     margin-right: 0px;
   }
 }
-.post-template-default #carousel-page .carousel-page__carousel__img:after {
-  content: '';
-  width: 100%;
+.post-template-default #carousel-page .carousel-page__carousel__img-item {
   background-color: grey;
-  opacity: 0.4;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-.post-template-default #carousel-page .carousel-page__carousel__sliders .carousel-page__carousel__sliders-item:after {
-  content: '';
-  width: 100%;
-  background-color: grey;
-  opacity: 0.4;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -1px;
+  background-blend-mode: multiply;
 }
 .publication-title {
   display: none;
@@ -1180,9 +1161,6 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
 body {
   overflow: hidden;
   height: 100vh;
-}
-body.single-post .img-page__btns-next-page__symbol {
-  display: none !important;
 }
 body.single-post .img-page__btns-btn-description {
   word-break: break-all;
@@ -1223,6 +1201,12 @@ body #img-page .img-page__btns .img-page__btns-btn .img-page__btns-btn__symbol s
   width: 1px;
   height: 15px;
   background-color: white;
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+body #img-page .img-page__btns .img-page__btns-btn .img-page__btns-btn__symbol--animation span:nth-of-type(2n) {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
 }
 body #img-page .img-page__btns .img-page__btns-next-page {
   position: relative;
@@ -1281,6 +1265,10 @@ body #img-page .img-page__btns .img-page__btns-btn-description p {
   line-height: 17px;
   font-weight: 500;
 }
+body #img-page .img-page__btns .img-page__btns-btn-description--animation,
+body #img-page .img-page__btns .img-page__btns-btn-description--animation * {
+  color: transparent;
+}
 body #img-page .slick-arrow {
   display: none !important;
 }
@@ -1294,6 +1282,8 @@ body #img-page .img-page__img__img .img-page__img__img-item {
   background-position: center;
   background-size: cover;
   height: 100vh !important;
+  background-color: grey;
+  background-blend-mode: multiply;
 }
 body #img-page .img-page__img__sliders {
   z-index: 10000000 !important;

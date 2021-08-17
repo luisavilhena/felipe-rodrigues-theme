@@ -5,7 +5,7 @@ body {
 	height: 100vh;
 	&.single-post {
 		.img-page__btns-next-page__symbol {
-			display: none !important;
+			// display: none !important;
 		}
 		.img-page__btns-btn-description {
 			// width: 180px;
@@ -46,6 +46,14 @@ body {
 						width: 1px;
 						height: 15px;
 						background-color: white;
+						transform: rotate(90deg);
+						transition: transform 0.5s;
+					}
+				}
+				.img-page__btns-btn__symbol--animation {
+					span:nth-of-type(2n) {
+						transform: rotate(0deg);
+						transition: transform 0.5s;
 					}
 				}
 			}
@@ -85,7 +93,6 @@ body {
 						margin-top: -1px;
 					}
 				}
-
 			}
 			.img-page__btns-btn-description {
 				position: absolute;
@@ -107,6 +114,10 @@ body {
 					font-weight: 500;
 				}
 			}
+			.img-page__btns-btn-description--animation,
+			.img-page__btns-btn-description--animation * {
+				color: transparent;
+			}
 		}
 
 		.slick-arrow {
@@ -123,6 +134,8 @@ body {
 				background-position: center;
 				background-size: cover;
 				height: 100vh !important;
+				background-color: grey;
+				background-blend-mode: multiply;
 			}
 		}
 
