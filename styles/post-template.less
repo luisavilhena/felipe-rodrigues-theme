@@ -1,8 +1,31 @@
 .post-template-default {
+	#main-menu {
+		> li {
+			> ul {
+				li {
+				
+				}
+				a {
+					width: 32%;
+					margin-left: -16px;
+					padding-left: 16px;
+					display: block;
+					background: #1c1c1c;
+				}
+			}
+		}
+		>li:nth-child(3n) {
+			ul {
+				a {
+					width: 65%;
+				}
+			}
+		}
+	}
 	#carousel-page {
 		.carousel-page__carousel__img-item{
-			background-color: grey;
-			background-blend-mode: multiply;
+			// background-color: grey;
+			// background-blend-mode: multiply;
 		}
 	}
 }
