@@ -1139,8 +1139,7 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
   }
 }
 .post-template-default #main-menu > li > ul a {
-  width: 32%;
-  margin-left: -16px;
+  width: 35%;
   padding-left: 16px;
   display: block;
   background: #1c1c1c;
