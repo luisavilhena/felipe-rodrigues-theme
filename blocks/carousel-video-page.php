@@ -4,13 +4,15 @@ use Carbon_Fields\Field;
  
 add_action( 'after_setup_theme', 'fr' );
  
-function fr_carousel_page() {
-	Block::make( 'Página de carrossel' )
+function fr_carousel_video_page() {
+	Block::make( 'Página de carrossel com video' )
 		->add_fields( array(
 			Field::make('rich_text', 'texto', 'Descrição'),
 			Field::make('complex', 'carousel', 'Carrossel')
 			  ->add_fields(array(
-			    Field::make('image', 'img', 'Imagem')
+			    Field::make('image', 'img', 'Imagem'),
+			    Field::make('text', 'embed', 'Embed de video'),
+			    Field::make('text', 'link', 'Link de video')
 			  ))
 			  ->set_layout('tabbed-vertical')
 		) )
@@ -51,16 +53,25 @@ function fr_carousel_page() {
 					<div class="carousel-page__carousel__img-item carousel-page__carousel__img-item--height carousel-page__carousel__img-item--zindex" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
 				
 					</div>
-						<?php endif; ?>
+					<?php endif; ?>
+					<?php if ($carousel['embed']) : ?>
+					<div class="carousel-page__carousel__img-item carousel-page__carousel__img-item--video">
+						<?php echo $carousel['embed'] ?>		
+					</div>
+					<?php endif; ?>
 					<?php endforeach;  ?>
 				</div>
 				<div class="carousel-page__carousel__sliders">
 					<?php foreach ($block['carousel'] as $carousel) : ?>
 						<?php if ($carousel['img']) : ?>
-					<a href="<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>" class="carousel-page__carousel__sliders-item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
-				
+					<a href="<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>" class="carousel-page__carousel__sliders-item carousel-page__carousel__sliders-item--img" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
 					</a>
-						<?php endif; ?>
+					<?php endif; ?>
+					<?php if ($carousel['embed']) : ?>
+					<a href="<?php echo $carousel['link'] ?>" target="_blank" class="carousel-page__carousel__sliders-item carousel-page__carousel__sliders-item--embed">
+						<?php echo $carousel['embed'] ?>		
+					</a>
+					<?php endif; ?>
 					<?php endforeach;  ?>
 				</div>
 			</div>
@@ -70,4 +81,4 @@ function fr_carousel_page() {
 			// return ob_get_flush();
 		} );
 }
-add_action( 'carbon_fields_register_fields', 'fr_carousel_page' );
+add_action( 'carbon_fields_register_fields', 'fr_carousel_video_page' );
