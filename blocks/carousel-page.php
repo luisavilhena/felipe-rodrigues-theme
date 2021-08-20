@@ -48,7 +48,7 @@ function fr_carousel_page() {
 				<div class="carousel-page__carousel__img">
 					<?php foreach ($block['carousel'] as $carousel) : ?>
 						<?php if ($carousel['img']) : ?>
-					<div class="carousel-page__carousel__img-item carousel-page__carousel__img-item--height carousel-page__carousel__img-item--zindex" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
+					<div class="carousel-page__carousel__img-item carousel-page__carousel__img-item--height carousel-page__carousel__img-item--zindex " style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
 				
 					</div>
 						<?php endif; ?>
@@ -57,7 +57,7 @@ function fr_carousel_page() {
 				<div class="carousel-page__carousel__sliders">
 					<?php foreach ($block['carousel'] as $carousel) : ?>
 						<?php if ($carousel['img']) : ?>
-					<a href="<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>" class="carousel-page__carousel__sliders-item" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
+					<a href="<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>" class="carousel-page__carousel__sliders-item carousel-page__carousel__sliders-item--img" style ="background-image: url('<?php echo wp_get_attachment_image_src($carousel['img'],'ap_image_desktop_full_no_crop')[0]; ?>');">
 				
 					</a>
 						<?php endif; ?>
