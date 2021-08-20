@@ -632,7 +632,6 @@ body #carousel-page .carousel-page__carousel__img .carousel-page__carousel__img-
   height: 50vh;
   margin: 150px auto;
   background-color: #1c1c1c;
-  display: none;
 }
 body #carousel-page .carousel-page__carousel__img .carousel-page__carousel__img-item.carousel-page__carousel__img-item--video {
   height: auto !important;

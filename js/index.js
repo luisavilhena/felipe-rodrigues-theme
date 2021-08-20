@@ -104,9 +104,9 @@ $(document).ready(function(){
 	const $itemIframe = $('.carousel-page__carousel__img-item.carousel-page__carousel__img-item--video.slick-slide.slick-current.slick-active');
 	if ($itemIframe.childElementCount !== 0) {
 		console.log('tem elemento')
-		$('.carousel-page__carousel__img-item iframe').css('display', 'block')
+		// $('.carousel-page__carousel__img-item iframe').css('display', 'block')
 	} else {
-		$('.carousel-page__carousel__img-item iframe').css('display', 'none')
+		// $('.carousel-page__carousel__img-item iframe').css('display', 'none')
 	}
 })
 
