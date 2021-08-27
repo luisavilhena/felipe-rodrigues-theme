@@ -764,6 +764,7 @@ body #carousel-page .carousel-page__carousel__sliders.slick-slider.carousel-page
 }
 body {
   overflow: hidden;
+  height: 100vh;
 }
 body #home .home__btns {
   position: absolute;
@@ -898,7 +899,10 @@ body #home .home__carousel__img .slick-list .home__carousel__img-item {
   height: 100vh !important;
 }
 body #home .home__carousel__img .slick-list .home__carousel__img-item .slick-slide .slick-current .slick-active {
-  height: 100vh !important;
+  height: auto !important;
+}
+body #home .slick-list.draggable {
+  height: auto !important;
 }
 body #home .home__carousel__sliders.slick-slider {
   z-index: 10000000;
@@ -950,7 +954,6 @@ body #home .home__carousel__sliders.slick-slider .slick-next:after {
   transform-origin: bottom right;
 }
 body #home .home__carousel__sliders.slick-slider .slick-list .home__carousel__sliders-item {
-  cursor: pointer;
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
@@ -965,6 +968,7 @@ body #home .home__carousel__sliders.slick-slider .slick-list .home__carousel__sl
   top: 0;
   bottom: 0;
   right: 0;
+  left: -1px;
   width: 100%;
   background-color: #000000;
   opacity: 0.5;
