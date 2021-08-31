@@ -271,9 +271,9 @@ body {
 
 				}
 				.carousel-page__btns-btn-description {
-					right: -30px;
-					left: -165px;
-					top: 3.5vh;
+					position: fixed;
+					left: 170px;
+					top: 14vh;
 					z-index: 1;
 				}
 			}
@@ -284,6 +284,10 @@ body {
 				.carousel-page__carousel__sliders-item {
 					margin-bottom: 0px !important;
 					width: auto !important;
+					display: block;
+					a {
+						display: block;
+					}
 				}
 				.carousel-page__carousel__sliders-item--embed iframe {
 					display: none;
@@ -291,6 +295,7 @@ body {
 				}
 			}
 			.carousel-page__carousel__img {
+				display: none;
 				margin: 0px;
 				.carousel-page__carousel__img-item--height {
 					height: 320px !important;
