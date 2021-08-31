@@ -752,10 +752,6 @@ body #carousel-page .carousel-page__carousel__sliders.slick-slider.carousel-page
   body #carousel-page .carousel-page__carousel__sliders .carousel-page__carousel__sliders-item a {
     display: block;
   }
-  body #carousel-page .carousel-page__carousel__sliders .carousel-page__carousel__sliders-item--embed iframe {
-    display: none;
-    margin: 0 auto;
-  }
   body #carousel-page .carousel-page__carousel__img {
     display: none;
     margin: 0px;
@@ -1170,13 +1166,13 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
     font-size: 11px !important;
     word-break: break-all;
     margin-right: 0;
+    margin-bottom: 10px;
   }
   .address a:nth-of-type(2n) {
     margin-top: 5px;
   }
   .address img {
-    width: 25px;
-    margin-bottom: 5px;
+    width: 30px;
   }
 }
 .post-template-default #main-menu > li > ul a {
