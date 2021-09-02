@@ -725,7 +725,7 @@ body #carousel-page .carousel-page__carousel__sliders.slick-slider.carousel-page
     overflow: auto;
   }
   body #carousel-page .carousel-page__btns {
-    z-index: 0;
+    z-index: 1000000000;
   }
   body #carousel-page .carousel-page__btns .carousel-page__btns-btn {
     display: none;
@@ -1183,7 +1183,7 @@ body #home .home__carousel__sliders.slick-slider.home__carousel__sliders--animat
 }
 @media screen and (max-width: 580px) {
   .publication-title {
-    z-index: 10;
+    z-index: 100000000;
     display: block;
     top: 22.5vh;
     position: fixed;
@@ -1396,6 +1396,10 @@ body #img-page .img-page__img__sliders .img-page__img__sliders-item:hover:after 
   }
   body #img-page .img-page__btns {
     z-index: 0;
+    position: fixed;
+    left: 1%;
+    width: 200px;
+    top: 71%;
   }
   body #img-page .img-page__btns .img-page__btns-btn {
     display: none;
@@ -1404,9 +1408,10 @@ body #img-page .img-page__img__sliders .img-page__img__sliders-item:hover:after 
     display: none;
   }
   body #img-page .img-page__btns .img-page__btns-btn-description {
-    left: -143px;
-    top: 5vh;
+    top: 0vh;
     z-index: 1;
+    width: 145px;
+    word-break: break-word;
   }
   body #img-page .img-page__img__sliders {
     position: relative !important;
