@@ -58,11 +58,6 @@ register_nav_menus(array(
   'main-menu' => 'Menu principal',
 ));
 
-add_action( 'wp_head', 'add_viewport_meta_tag' , '1' );
-
-function add_viewport_meta_tag() {
-    echo '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">';
-}
 
 ///////////
 ////post///
