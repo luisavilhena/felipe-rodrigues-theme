@@ -5,6 +5,16 @@ body {
 	height: 100vh;
 	.slick-lightbox {
 		z-index: 9999999999;
+		.slick-lightbox-slick-item-inner {
+			width: 90% !important;
+			height: 90% !important;
+			max-width: 90vh !important;
+			max-height: 90vh !important;
+			>img {
+				margin-top: 100px;
+				max-height: 90vh !important;
+			}
+		}
 		.slick-prev,
 		.slick-arrow {
 			display: none !important;

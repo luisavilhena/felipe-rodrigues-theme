@@ -13,6 +13,7 @@ function menuButtonOpen() {
 $(document).ready(function(){
 		$('.carousel-page__carousel__sliders').slickLightbox({
 			itemSelector: '.carousel-page__carousel__sliders-item--img',
+			fullscreen: true,
 	    shouldOpen: function(slickLightbox, $clickedElement){
 	      if ($clickedElement.hasClass('carousel-page__carousel__sliders-item--embed')) {
 	        alert('Will not open on .do-not-open!');
