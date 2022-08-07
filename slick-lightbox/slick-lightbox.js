@@ -29,6 +29,7 @@ function setMetaViewport(max_min,rate,userScaleble){
   return $("meta[name='viewport']").attr("content",new_val);
 }
  
+setMetaViewport("max","5.0","yes");
  
  
 //original file 

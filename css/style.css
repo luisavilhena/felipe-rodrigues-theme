@@ -492,6 +492,10 @@ body {
   overflow: hidden;
   height: 100vh;
 }
+body .slick-slider,
+body .carousel-page__carousel__sliders-item {
+  touch-action: initial !important;
+}
 body .slick-lightbox {
   z-index: 9999999999;
 }
