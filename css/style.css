@@ -494,7 +494,7 @@ body {
 }
 body .slick-slider,
 body .carousel-page__carousel__sliders-item {
-  touch-action: initial !important;
+  touch-action: unset !important;
 }
 body .slick-lightbox {
   z-index: 9999999999;
